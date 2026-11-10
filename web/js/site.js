@@ -85,7 +85,7 @@
       }
 
       var slug = items[index].getAttribute("data-slug");
-      if (slug && useHash) {
+      if (slug && useHash && useHash !== "silent") {
         try {
           history.replaceState(null, "", "#" + slug);
         } catch (err) {

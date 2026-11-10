@@ -1041,12 +1041,13 @@ p {
   }
 }
 
-/* 只有在 JS 可用时才折叠其余角色面板，保证禁用 JS 时内容仍完整可读 */
-.js .panel {
+/* 只有在 JS 成功接管切换逻辑（给 .panels 加上 tabs-ready）后才折叠其余角色面板；
+   JS 失效或不支持时，所有英雄的点位会依次全部展开，内容不会丢失 */
+.panels.tabs-ready .panel {
   display: none;
 }
 
-.js .panel.is-active {
+.panels.tabs-ready .panel.is-active {
   display: block;
 }
 
@@ -1528,14 +1529,14 @@ p {
 }
 
 /* ---------- 12. 滚动出现动画 ---------- */
-/* 仅在 JS 可用时隐藏，保证禁用脚本时内容依然完整可见 */
-.js .reveal {
+/* 由站内脚本主动加 .anim 后才隐藏，脚本一旦异常内容依旧可见 */
+.anim .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
 
-.js .reveal.is-in {
+.anim .reveal.is-in {
   opacity: 1;
   transform: none;
 }
@@ -1565,7 +1566,7 @@ p {
     opacity: 1;
     transform: none;
   }
-  .js .reveal {
+  .anim .reveal {
     opacity: 1;
     transform: none;
   }

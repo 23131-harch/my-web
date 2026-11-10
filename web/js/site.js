@@ -66,8 +66,12 @@
 
       var accent = items[index].getAttribute("data-accent");
       if (accent) {
-        lineup.style.setProperty("--accent", accent);
-        lineup.style.setProperty("--accent-soft", hexToRgba(accent, 0.14));
+        try {
+          lineup.style.setProperty("--accent", accent);
+          lineup.style.setProperty("--accent-soft", hexToRgba(accent, 0.14));
+        } catch (err) {
+          /* 极旧浏览器不支持自定义属性，忽略即可，页面仍可用 */
+        }
       }
       paintBackground(items[index].getAttribute("data-bg"));
 
@@ -149,6 +153,12 @@
       });
     }
     activate(initial, "silent");
+
+    // 关键：只有在切换逻辑确实跑通之后，才允许 CSS 折叠其余面板。
+    // 若上面任何一步在旧浏览器里失败，这一句不会执行，页面就会保持"全部展开"，
+    // 用户依然能看到所有英雄的点位，而不是一片空白。
+    var panelsBox = lineup.querySelector(".panels");
+    if (panelsBox) panelsBox.className += " tabs-ready";
   }
 
   /* ---------- 3. 滚动出现动画 ---------- */
@@ -157,11 +167,11 @@
     if (!nodes.length) return;
 
     if (!("IntersectionObserver" in window)) {
-      nodes.forEach(function (n) {
-        n.classList.add("is-in");
-      });
       return;
     }
+
+    // 先挂 .anim 再观察：浏览器不支持或被中断时，元素保持可见
+    docEl.className += " anim";
 
     var io = new IntersectionObserver(
       function (entries) {
@@ -230,12 +240,14 @@
   }
 
   function boot() {
-    initNav();
-    initLineup();
-    initReveal();
-    initFilters();
-    initToTop();
-    initActiveNav();
+    // 各自独立执行：任何一个模块出错都不影响其余模块
+    [initNav, initLineup, initReveal, initFilters, initToTop, initActiveNav].forEach(function (fn) {
+      try {
+        fn();
+      } catch (err) {
+        if (window.console && console.warn) console.warn("[LINEUP LAB] 初始化跳过：", fn.name, err);
+      }
+    });
   }
 
   if (docEl.readyState === "loading") {

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="无畏契约隐世修所常用道具点位：6 名英雄、15 组点位，站位/瞄点/落点/时机全拆解。">
+<meta name="author" content="《新生实践课》网页设计作业">
+<meta name="keywords" content="无畏契约,VALORANT,道具点位,lineup,点位图,亚海悬城,源工重镇,隐世修所,莲华古城,日落之城">
+<title>隐世修所 点位 · LINEUP LAB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1923'/%3E%3Cpath d='M8 24 L16 6 L24 24 L20 24 L16 14 L12 24 Z' fill='%23FF4655'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../web/css/site.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="../index.html">
+      <svg class="brand__mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M6 27 L17 4 L28 27 L22.6 27 L17 14 L11.4 27 Z" fill="#FF4655"/>
+        <path d="M13.4 22.6 L17 15 L20.6 22.6 Z" fill="#0F1923"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">LINEUP LAB</span>
+        <span class="brand__sub">点位实验室 · VALORANT</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../web/ascent.html">亚海悬城</a>
+        <a href="../web/bind.html">源工重镇</a>
+        <a href="../web/haven.html">隐世修所</a>
+        <a href="../web/lotus.html">莲华古城</a>
+        <a href="../web/sunset.html">日落之城</a>
+        <a href="../web/agents.html">角色速查</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="map-hero">
+    <img class="map-hero__img" src="../image/maps/haven_splash.jpg" alt="隐世修所 地图全景">
+    <div class="map-hero__scrim"></div>
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">首页</a><span>/</span><span>地图库</span><span>/</span><span>隐世修所</span>
+      </nav>
+      <h1 class="map-hero__title">隐世修所</h1>
+      <div class="map-hero__en">HAVEN · 三包点 · 长枪线</div>
+      <p class="map-hero__desc">隐世修所是唯一一张三包点地图：A 长道、B 窗口、C 长道三条进攻线各自独立，防守方永远少一个人。这张图的关键不是「封死一个点」，而是「用最少道具拖住两条线」。</p>
+      <div class="map-hero__stats">
+        <div><b>3</b>个包点</div>
+        <div><b>6</b>名英雄</div>
+        <div><b>15</b>组点位</div>
+        <div><b>100%</b>官方中文译名</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <div class="agent-bg"><div class="agent-bg__layer is-on"></div><div class="agent-bg__layer"></div></div>
+    <div class="agent-bg__veil"></div>
+    <div class="wrap wrap--wide">
+      <div class="lineup__hint">
+        <b>怎么用：</b>点选左侧立绘（手机端为上方横排）切换英雄 → 右侧显示该英雄在本图的点位。
+        键盘 <b>↑ ↓</b> 也可以切换；切换时整块背景与主题色会跟着变。
+      </div>
+      <div class="lineup__grid">
+        <div class="rail" role="tablist" aria-label="选择英雄">
+          <div class="rail__title">英雄 · 点击切换</div>
+        <button class="rail__item is-active" type="button" role="tab" id="breach"
+                aria-selected="true" tabindex="0"
+                data-target="#panel-haven-breach" data-slug="breach"
+                data-accent="#E8A33D" data-bg="../image/agents/breach_bg.jpg" title="铁臂 · 先锋">
+          <img class="rail__portrait" src="../image/agents/breach_full.webp" alt="铁臂 立绘" loading="lazy">
+          <span class="rail__label">铁臂<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="astra"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-haven-astra" data-slug="astra"
+                data-accent="#1FB6A6" data-bg="../image/agents/astra_bg.jpg" title="星礈 · 控场者">
+          <img class="rail__portrait" src="../image/agents/astra_full.webp" alt="星礈 立绘" loading="lazy">
+          <span class="rail__label">星礈<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="sage"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-haven-sage" data-slug="sage"
+                data-accent="#4C86D9" data-bg="../image/agents/sage_bg.jpg" title="贤者 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/sage_full.webp" alt="贤者 立绘" loading="lazy">
+          <span class="rail__label">贤者<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="deadlock"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-haven-deadlock" data-slug="deadlock"
+                data-accent="#4C86D9" data-bg="../image/agents/deadlock_bg.jpg" title="钢锁 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/deadlock_full.webp" alt="钢锁 立绘" loading="lazy">
+          <span class="rail__label">钢锁<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="reyna"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-haven-reyna" data-slug="reyna"
+                data-accent="#FF4655" data-bg="../image/agents/reyna_bg.jpg" title="芮娜 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/reyna_full.webp" alt="芮娜 立绘" loading="lazy">
+          <span class="rail__label">芮娜<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="neon"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-haven-neon" data-slug="neon"
+                data-accent="#FF4655" data-bg="../image/agents/neon_bg.jpg" title="霓虹 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/neon_full.webp" alt="霓虹 立绘" loading="lazy">
+          <span class="rail__label">霓虹<em>DUELIST</em></span>
+        </button>
+        </div>
+        <div class="panels">
+      <section class="panel is-active" id="panel-haven-breach" role="tabpanel"
+               aria-label="铁臂 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">铁臂</h2>
+            <div class="agent-head__en">BREACH · INITIATOR</div>
+            <p class="agent-head__why">隐世修所是三条进攻线的三包点地图，铁臂的闪现加地震可以在任何一条线开团，是这张图最强的「开团机器」——他的技能全部穿墙，等于免费获得一次先手。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/breach_ability1.png" alt=""><b>闪点爆破</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/breach_ability2.png" alt=""><b>山崩地陷</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/breach_grenade.png" alt=""><b>剧震余波</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/breach_ultimate.png" alt=""><b>惊雷卷地</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_breach_01.png"
+                   alt="铁臂 在隐世修所的A 长道穿墙闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 闪点爆破</div>
+              <h3 class="spot__title">A 长道穿墙闪</h3>
+              <p class="spot__sub">闪点爆破　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 长道中段的墙后，贴住墙，确保身体完全在掩体后。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 长道尽头的墙面中上部，按住技能键让闪从墙里穿出去，在 A 塔楼方向炸开。</dd></div>
+                <div><dt>落点</dt><dd>A 点塔楼和包点方向同时白屏，队伍贴墙推进零风险。</dd></div>
+                <div><dt>时机</dt><dd>队伍贴到 A 长道中段、准备同步进点的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>铁臂的闪是穿墙的，隔一堵墙放比露头放安全得多。闪爆前别自己先露头。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_breach_02.png"
+                   alt="铁臂 在隐世修所的中路下水道地震点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 山崩地陷</div>
+              <h3 class="spot__title">中路下水道地震</h3>
+              <p class="spot__sub">山崩地陷　·　约 25 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在下水道入口的拐角后，面向通道方向。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压在地面，按住技能向前推进，让震荡波沿下水道一路推出去。</dd></div>
+                <div><dt>落点</dt><dd>下水道和 B 窗口的守方全部被震晕，队伍可以安全穿中路转点。</dd></div>
+                <div><dt>时机</dt><dd>「中路转 B」或「中路转 C」的转移瞬间——这是隐世修所最常见的一条转点路线。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>震荡的伤害很低，目的是「晕住」。震完 1 秒内必须有人跟上，不然对面就恢复了。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_breach_03.png"
+                   alt="铁臂 在隐世修所的C 长道穿墙开团点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 闪点爆破</div>
+              <h3 class="spot__title">C 长道穿墙开团</h3>
+              <p class="spot__sub">闪点爆破　·　约 24 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 长道中段的墙后，贴墙，身体完全在掩体后。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 C 长道尽头的墙面中上部，按住技能让闪穿墙而过，在 C 平台方向炸开。</dd></div>
+                <div><dt>落点</dt><dd>C 平台守方白屏，队伍贴着长道直接推上平台。</dd></div>
+                <div><dt>时机</dt><dd>队伍推到 C 长道中段的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>隐世修所的 C 点比 A 点更「垂直」，闪的高度要略微抬高，不然会闪到平台下方的空地。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-haven-astra" role="tabpanel"
+               aria-label="星礈 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">星礈</h2>
+            <div class="agent-head__en">ASTRA · CONTROLLER</div>
+            <p class="agent-head__why">隐世修所三包点、转点距离长，星礈可以提前布好五颗星，随时在三条线之间切换烟雾——她的强度不在「一次封死」，而在「对面永远猜不到你下一秒封哪条线」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/astra_ability1.png" alt=""><b>新星脉冲</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/astra_ability2.png" alt=""><b>星云</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/astra_grenade.png" alt=""><b>重力之阱</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/astra_ultimate.png" alt=""><b>宇宙分裂</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_astra_04.png"
+                   alt="星礈 在隐世修所的A 点双星封塔楼点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 星云</div>
+              <h3 class="spot__title">A 点双星封塔楼</h3>
+              <p class="spot__sub">星云　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>开局在出生点就能布星，完全不需要前进——用战术地图把星放到 A 点方向。</dd></div>
+                <div><dt>瞄点</dt><dd>在 A 塔楼入口和 A 点包点各放一颗星，进入战斗后按「星云」把两颗星变成烟。</dd></div>
+                <div><dt>落点</dt><dd>A 点两个最关键的高台视野同时被封，队伍可以从 A 长道直接进点。</dd></div>
+                <div><dt>时机</dt><dd>开局布星，等队伍到 A 长道中段再激活。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>星放下后是「半透明」的，敌人也能看到。所以要在对面看不到的时机再变成烟。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_astra_05.png"
+                   alt="星礈 在隐世修所的C 长道控场点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 重力之阱</div>
+              <h3 class="spot__title">C 长道控场</h3>
+              <p class="spot__sub">重力之阱　·　约 24 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 长道入口的掩体后，用地图把重力之阱放到 C 点平台入口。</dd></div>
+                <div><dt>瞄点</dt><dd>星放在 C 点平台与 C 长道的交界处，激活后会形成一个把敌人往中心拉的区域。</dd></div>
+                <div><dt>落点</dt><dd>站在平台上的守方被拉住、无法正常移动，队伍可以趁机贴进 C 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 C 长道、对面开始集结守点的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>重力之阱不造成伤害，但能打断跳跃和移动。配合队友的闪光，效果直接翻倍。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_astra_06.png"
+                   alt="星礈 在隐世修所的B 窗口星云封锁点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 星云</div>
+              <h3 class="spot__title">B 窗口星云封锁</h3>
+              <p class="spot__sub">星云　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>开局在出生点布星，用战术地图把星放到 B 点方向。</dd></div>
+                <div><dt>瞄点</dt><dd>一颗星压在 B 窗口内侧，另一颗放在 B 车库出口，等对面进 B 窗口时把星变成烟。</dd></div>
+                <div><dt>落点</dt><dd>B 窗口和车库两个入口同时被封，对面快攻 B 点的节奏被打断。</dd></div>
+                <div><dt>时机</dt><dd>开局布星；听到 B 窗口脚步再激活。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 点是三条线里最窄的，两颗星就能封死。留着剩下的星去支援 C 点。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-haven-sage" role="tabpanel"
+               aria-label="贤者 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">贤者</h2>
+            <div class="agent-head__en">SAGE · SENTINEL</div>
+            <p class="agent-head__why">隐世修所的 B 点是最容易被快攻的包点，贤者的玉城可以一秒钟把 B 窗口封死——这是这张图流传最广、也最好用的一手防守操作。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/sage_ability1.png" alt=""><b>薄冰</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/sage_ability2.png" alt=""><b>逢春</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/sage_grenade.png" alt=""><b>玉城</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/sage_ultimate.png" alt=""><b>再起</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_sage_07.png"
+                   alt="贤者 在隐世修所的B 窗口一秒封死点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 玉城</div>
+              <h3 class="spot__title">B 窗口一秒封死</h3>
+              <p class="spot__sub">玉城　·　约 14 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点包点后方的墙边，确保能同时看到 B 窗口和 B 车库方向。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 B 窗口正下方的地面按技能放墙，墙会沿「窗口 → 包点」方向立起来。</dd></div>
+                <div><dt>落点</dt><dd>一整面墙把 B 窗口堵死，快攻队伍只能在窗口外面挨打。</dd></div>
+                <div><dt>时机</dt><dd>听到 B 窗口有脚步、或者开局预判对面要打 B 时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>墙要贴地不要悬空，悬空会有缝隙被人爬过去。墙的耐久不高，放完要立刻补位。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_sage_08.png"
+                   alt="贤者 在隐世修所的A 长道减速带点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 薄冰</div>
+              <h3 class="spot__title">A 长道减速带</h3>
+              <p class="spot__sub">薄冰　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点包点侧的掩体后，能听到 A 长道的脚步。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 长道出口的地面扔出去，让冰面铺满出口。</dd></div>
+                <div><dt>落点</dt><dd>A 长道出口变成一片冰面，敌人踩上去移动变慢、声音放大，等于免费报点。</dd></div>
+                <div><dt>时机</dt><dd>对面提速、冲到 A 长道中段时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>薄冰同时是「声音放大器」。对面踩上去，你能听到整条长道的位置。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_sage_09.png"
+                   alt="贤者 在隐世修所的C 平台玉城封墙点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 玉城</div>
+              <h3 class="spot__title">C 平台玉城封墙</h3>
+              <p class="spot__sub">玉城　·　约 16 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 点包点后方的墙边，确保能看到 C 平台入口。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 C 平台入口正下方的地面，让墙沿「平台 → 包点」方向立起来。</dd></div>
+                <div><dt>落点</dt><dd>C 平台的进入口被封，进攻方只能从 C 长道硬冲。</dd></div>
+                <div><dt>时机</dt><dd>听到 C 平台有脚步、或者预判对面要打 C 时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>C 平台的地面有高低差，墙要贴着「平台下沿」放，悬空会露出可以跳过去的缝隙。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-haven-deadlock" role="tabpanel"
+               aria-label="钢锁 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">钢锁</h2>
+            <div class="agent-head__en">DEADLOCK · SENTINEL</div>
+            <p class="agent-head__why">隐世修所的 C 长道又宽又直，钢锁的声感陷阱加重力捕网，可以把整条 C 线彻底锁死——她的点位逻辑是「让对面一进长道就被发现，一出来就被抓住」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/deadlock_ability1.png" alt=""><b>声感陷阱</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/deadlock_grenade.png" alt=""><b>阻域屏障</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/deadlock_ability2.png" alt=""><b>重力捕网</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/deadlock_ultimate.png" alt=""><b>断魂索道</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_deadlock_10.png"
+                   alt="钢锁 在隐世修所的C 长道听觉预警点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 声感陷阱</div>
+              <h3 class="spot__title">C 长道听觉预警</h3>
+              <p class="spot__sub">声感陷阱　·　覆盖约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 点平台下方的墙边，把陷阱贴在 C 长道中段的地面上。</dd></div>
+                <div><dt>瞄点</dt><dd>陷阱贴在长道中央，覆盖从入口到中段的整段脚步声。</dd></div>
+                <div><dt>落点</dt><dd>敌人一进 C 长道就会被侦测，位置直接暴露在团队视野里。</dd></div>
+                <div><dt>时机</dt><dd>每回合开局放；换防时用召回带走。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>声感陷阱只报位置、不造成伤害，所以要放在「对面必须经过」的位置。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_deadlock_11.png"
+                   alt="钢锁 在隐世修所的C 长道抓人点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 重力捕网</div>
+              <h3 class="spot__title">C 长道抓人</h3>
+              <p class="spot__sub">重力捕网　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 点包点的掩体后，等对面推进到 C 长道出口。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 C 长道出口的中央，等对面第一个人出来的瞬间打出去。</dd></div>
+                <div><dt>落点</dt><dd>命中后把敌人网住、无法移动，队友可以轻松补枪。</dd></div>
+                <div><dt>时机</dt><dd>对面第一波提速的那一刻，抓第一个人最有价值。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>捕网只有一发，空了就要立刻换位。别在空旷处站着瞄准。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-haven-reyna" role="tabpanel"
+               aria-label="芮娜 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">芮娜</h2>
+            <div class="agent-head__en">REYNA · DUELIST</div>
+            <p class="agent-head__why">隐世修所的 B 窗口和 A 塔楼都是「一对一」的好位置，芮娜的单挑和回血能力，让她特别适合守这种「敌人必须一个个过门」的点。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/reyna_ability1.png" alt=""><b>噬尽</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/reyna_ability2.png" alt=""><b>逐散</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/reyna_grenade.png" alt=""><b>睥睨</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/reyna_ultimate.png" alt=""><b>女皇旨令</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_reyna_12.png"
+                   alt="芮娜 在隐世修所的B 窗口卡角点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 睥睨</div>
+              <h3 class="spot__title">B 窗口卡角</h3>
+              <p class="spot__sub">睥睨　·　约 12 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点包点内侧的墙后，先贴墙听 B 窗口的脚步。</dd></div>
+                <div><dt>瞄点</dt><dd>把眼球扔到 B 窗口内侧上方，让它在对面进来时直接爆开致盲。</dd></div>
+                <div><dt>落点</dt><dd>从 B 窗口进来的敌人全部被致盲，你可以从侧面安全补枪。</dd></div>
+                <div><dt>时机</dt><dd>听到 B 窗口动静的瞬间。眼球可以提前放，等对面「看到」它才生效。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>眼球要放在对面「必须看」的地方。放在墙角、对面不看，就等于没放。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_reyna_13.png"
+                   alt="芮娜 在隐世修所的A 塔楼打完回血点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 噬尽</div>
+              <h3 class="spot__title">A 塔楼打完回血</h3>
+              <p class="spot__sub">噬尽　·　拾取范围约 8 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 塔楼上，利用高度优势先手打掉一个。</dd></div>
+                <div><dt>瞄点</dt><dd>击杀后立刻按「噬尽」拾取灵魂碎片回血，然后甩到包点背面的掩体后。</dd></div>
+                <div><dt>落点</dt><dd>打完一波立刻满状态，可以继续接第二波。</dd></div>
+                <div><dt>时机</dt><dd>每次击杀后的 3 秒内。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>拾取灵魂有前摇，别在开阔地捡。先躲到掩体后再按，否则你是站着不动的靶子。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-haven-neon" role="tabpanel"
+               aria-label="霓虹 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">霓虹</h2>
+            <div class="agent-head__en">NEON · DUELIST</div>
+            <p class="agent-head__why">隐世修所三个包点之间距离远，霓虹的高速通道可以瞬间切点，是这张图最好的「快速转点」决斗者——她的价值是「10 秒内出现在另一个包点」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/neon_ability2.png" alt=""><b>充能疾驰</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/neon_ability1.png" alt=""><b>闪电弹球</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/neon_grenade.png" alt=""><b>高速通道</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/neon_ultimate.png" alt=""><b>超限暴走</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_neon_14.png"
+                   alt="霓虹 在隐世修所的C 长道极速推进点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 高速通道</div>
+              <h3 class="spot__title">C 长道极速推进</h3>
+              <p class="spot__sub">高速通道　·　约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 长道入口，面向通道，先按住技能蓄力。</dd></div>
+                <div><dt>瞄点</dt><dd>按住技能向前冲刺，两道电墙沿直线展开，挡住 C 长道两侧的视线。</dd></div>
+                <div><dt>落点</dt><dd>整条 C 长道被电墙覆盖，霓虹可以一路冲到 C 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍决定「一波 C」时。冲刺途中不要停，停下就失去电墙保护。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>冲刺速度很快，注意别冲过头撞到对面脸上。冲到包点前提前松开。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/haven_neon_15.png"
+                   alt="霓虹 在隐世修所的A 长道反弹闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 闪电弹球</div>
+              <h3 class="spot__title">A 长道反弹闪</h3>
+              <p class="spot__sub">闪电弹球　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 长道中段的墙后，先贴墙。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 长道尽头的墙面打出一发，让它反弹进 A 塔楼下方，再落地引爆。</dd></div>
+                <div><dt>落点</dt><dd>塔楼下方的守方被闪并带上静电，队伍可以贴脸进 A 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍推进到 A 长道中段的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>弹球需要「反弹」才有效果。直接扔进去，对面一转身就躲开了。</div>
+            </div>
+          </article>
+      </section>
+        </div>
+      </div>
+
+      <div class="map-switch">
+        <span class="eyebrow">NEXT MAP</span>
+        <h2 class="section-title" style="font-size:clamp(20px,2.4vw,28px);margin-top:10px;">换个地图继续看</h2>
+        <div class="map-switch__list">
+          <a class="map-switch__item" href="ascent.html"><span>亚海悬城</span><em>ASCENT</em></a><a class="map-switch__item" href="bind.html"><span>源工重镇</span><em>BIND</em></a><a class="map-switch__item" href="lotus.html"><span>莲华古城</span><em>LOTUS</em></a><a class="map-switch__item" href="sunset.html"><span>日落之城</span><em>SUNSET</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">关于本站</div>
+        <p style="color:var(--muted);font-size:14px;max-width:38ch;margin:0;">
+          LINEUP LAB 是一个《无畏契约》常用道具点位整理站：5 张地图、30 名英雄、80 组点位，
+          每组都写清楚站位、瞄点、落点与时机。本站为《新生实践课》网页设计作业作品。
+        </p>
+      </div>
+      <div>
+        <div class="foot-title">地图导航</div>
+        <ul class="foot-list">
+        <li><a href="../web/ascent.html">亚海悬城 · ASCENT</a></li>
+        <li><a href="../web/bind.html">源工重镇 · BIND</a></li>
+        <li><a href="../web/haven.html">隐世修所 · HAVEN</a></li>
+        <li><a href="../web/lotus.html">莲华古城 · LOTUS</a></li>
+        <li><a href="../web/sunset.html">日落之城 · SUNSET</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-title">素材与声明</div>
+        <ul class="foot-list">
+          <li>游戏美术素材版权归 Riot Games 所有</li>
+          <li>英雄立绘 / 技能图标 / 地图图取自官方公开素材接口</li>
+          <li>点位示意图为本站原创绘制，非精确比例</li>
+          <li>本站与 Riot Games 无隶属关系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LINEUP LAB · 点位实验室　|　《新生实践课》网页设计作业</span>
+      <span>5 MAPS · 30 AGENTS · 80 LINEUPS</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="回到顶部">↑</button>
+<script src="../web/js/site.js"></script>
+</body>
+</html>

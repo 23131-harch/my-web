@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="无畏契约亚海悬城常用道具点位：6 名英雄、17 组点位，站位/瞄点/落点/时机全拆解。">
+<meta name="author" content="《新生实践课》网页设计作业">
+<meta name="keywords" content="无畏契约,VALORANT,道具点位,lineup,点位图,亚海悬城,源工重镇,隐世修所,莲华古城,日落之城">
+<title>亚海悬城 点位 · LINEUP LAB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1923'/%3E%3Cpath d='M8 24 L16 6 L24 24 L20 24 L16 14 L12 24 Z' fill='%23FF4655'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../web/css/site.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="../index.html">
+      <svg class="brand__mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M6 27 L17 4 L28 27 L22.6 27 L17 14 L11.4 27 Z" fill="#FF4655"/>
+        <path d="M13.4 22.6 L17 15 L20.6 22.6 Z" fill="#0F1923"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">LINEUP LAB</span>
+        <span class="brand__sub">点位实验室 · VALORANT</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../web/ascent.html">亚海悬城</a>
+        <a href="../web/bind.html">源工重镇</a>
+        <a href="../web/haven.html">隐世修所</a>
+        <a href="../web/lotus.html">莲华古城</a>
+        <a href="../web/sunset.html">日落之城</a>
+        <a href="../web/agents.html">角色速查</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="map-hero">
+    <img class="map-hero__img" src="../image/maps/ascent_splash.jpg" alt="亚海悬城 地图全景">
+    <div class="map-hero__scrim"></div>
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">首页</a><span>/</span><span>地图库</span><span>/</span><span>亚海悬城</span>
+      </nav>
+      <h1 class="map-hero__title">亚海悬城</h1>
+      <div class="map-hero__en">ASCENT · 双包点 · 中央通道</div>
+      <p class="map-hero__desc">亚海悬城是一座把「视野争夺」写在骨子里的地图：A 天台、中路天窗、B 天台三处高地，决定了谁能在开局先看到谁。这张图的点位思路只有一句话——先抢高台，再用道具把高台封死。</p>
+      <div class="map-hero__stats">
+        <div><b>2</b>个包点</div>
+        <div><b>6</b>名英雄</div>
+        <div><b>17</b>组点位</div>
+        <div><b>100%</b>官方中文译名</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <div class="agent-bg"><div class="agent-bg__layer is-on"></div><div class="agent-bg__layer"></div></div>
+    <div class="agent-bg__veil"></div>
+    <div class="wrap wrap--wide">
+      <div class="lineup__hint">
+        <b>怎么用：</b>点选左侧立绘（手机端为上方横排）切换英雄 → 右侧显示该英雄在本图的点位。
+        键盘 <b>↑ ↓</b> 也可以切换；切换时整块背景与主题色会跟着变。
+      </div>
+      <div class="lineup__grid">
+        <div class="rail" role="tablist" aria-label="选择英雄">
+          <div class="rail__title">英雄 · 点击切换</div>
+        <button class="rail__item is-active" type="button" role="tab" id="jett"
+                aria-selected="true" tabindex="0"
+                data-target="#panel-ascent-jett" data-slug="jett"
+                data-accent="#FF4655" data-bg="../image/agents/jett_bg.jpg" title="捷风 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/jett_full.webp" alt="捷风 立绘" loading="lazy">
+          <span class="rail__label">捷风<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="sova"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-ascent-sova" data-slug="sova"
+                data-accent="#E8A33D" data-bg="../image/agents/sova_bg.jpg" title="猎枭 · 先锋">
+          <img class="rail__portrait" src="../image/agents/sova_full.webp" alt="猎枭 立绘" loading="lazy">
+          <span class="rail__label">猎枭<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="brimstone"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-ascent-brimstone" data-slug="brimstone"
+                data-accent="#1FB6A6" data-bg="../image/agents/brimstone_bg.jpg" title="炼狱 · 控场者">
+          <img class="rail__portrait" src="../image/agents/brimstone_full.webp" alt="炼狱 立绘" loading="lazy">
+          <span class="rail__label">炼狱<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="cypher"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-ascent-cypher" data-slug="cypher"
+                data-accent="#4C86D9" data-bg="../image/agents/cypher_bg.jpg" title="零 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/cypher_full.webp" alt="零 立绘" loading="lazy">
+          <span class="rail__label">零<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="omen"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-ascent-omen" data-slug="omen"
+                data-accent="#1FB6A6" data-bg="../image/agents/omen_bg.jpg" title="幽影 · 控场者">
+          <img class="rail__portrait" src="../image/agents/omen_full.webp" alt="幽影 立绘" loading="lazy">
+          <span class="rail__label">幽影<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="phoenix"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-ascent-phoenix" data-slug="phoenix"
+                data-accent="#FF4655" data-bg="../image/agents/phoenix_bg.jpg" title="不死鸟 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/phoenix_full.webp" alt="不死鸟 立绘" loading="lazy">
+          <span class="rail__label">不死鸟<em>DUELIST</em></span>
+        </button>
+        </div>
+        <div class="panels">
+      <section class="panel is-active" id="panel-ascent-jett" role="tabpanel"
+               aria-label="捷风 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">捷风</h2>
+            <div class="agent-head__en">JETT · DUELIST</div>
+            <p class="agent-head__why">A 天台与中路高台是这张图的视野核心。捷风的「凌空」可以直接上高台，「瞬云」能临时造墙，是最适合打快节奏抢点的决斗者——她的点位不是「扔得远」，而是「扔完能立刻贴上去」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/jett_ability1.png" alt=""><b>凌空</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/jett_ability2.png" alt=""><b>逐风</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/jett_grenade.png" alt=""><b>瞬云</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/jett_ultimate.png" alt=""><b>飓刃</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_jett_01.png"
+                   alt="捷风 在亚海悬城的三步封 A 天台点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 瞬云</div>
+              <h3 class="spot__title">三步封 A 天台</h3>
+              <p class="spot__sub">瞬云　·　约 24 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅通向 A 大道那道门框的内侧，背贴右侧墙面。这一步的关键不是「站哪」，而是「别被中路看到」——身体要完全藏在门框投下的阴影里。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬到画面中上部约三分之一处，对准 A 大道尽头「天台护栏」与天空的交界线，然后向斜上方轻推投掷。瞬云没有弹道提示，第一颗扔完看云层边缘是不是压住护栏，第二颗再修正，两三颗就能形成肌肉记忆。</dd></div>
+                <div><dt>落点</dt><dd>云朵在 A 天台入口正上方展开，同时切断「A 天台 → A 点」和「A 天台 → A 大道」两条高台枪线，守方最舒服的架枪位被一秒抹掉。</dd></div>
+                <div><dt>时机</dt><dd>队伍第一波提速、准备从 A 大道贴脸进场时投掷。和第二颗云错开 2–3 秒，不要两颗同时炸在同一个位置——那样对面只需要等一次烟散。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>瞬云只有 2 秒多，属于「短烟」。投完立刻往前压 3 步占住 A 大道门框，等云散的时候你已经贴到 A 点了。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_jett_02.png"
+                   alt="捷风 在亚海悬城的直接上 A 天台抢高台点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 凌空</div>
+              <h3 class="spot__title">直接上 A 天台抢高台</h3>
+              <p class="spot__sub">凌空　·　垂直约 4 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站到 A 大道台阶最上一级，紧贴左侧墙壁。起跳前先确认 A 点方向没有直接架枪，因为「凌空」起跳后的 1 秒是完全暴露的。</dd></div>
+                <div><dt>瞄点</dt><dd>这一步不需要瞄准道具，需要瞄准「落点」：起跳前把准星压在 A 天台护栏的转角上，落地瞬间直接把准星甩向包点方向，不要在天台上先找目标。</dd></div>
+                <div><dt>落点</dt><dd>直接站上 A 天台，拿到对 A 点包点和 A 大道进入口的完整俯视视野，守方所有「贴墙站」的位置都在你脚下。</dd></div>
+                <div><dt>时机</dt><dd>队友刚甩出闪光或烟、守方视线被切掉的 1 秒内起跳；或者守方换点、A 点只剩 1 人时偷点。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>上去之后先别急着开枪，先报「A 天台有人」让队友从下面同时进。一个人站天台被集火打掉，是这张图最常见的送分方式。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-ascent-sova" role="tabpanel"
+               aria-label="猎枭 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">猎枭</h2>
+            <div class="agent-head__en">SOVA · INITIATOR</div>
+            <p class="agent-head__why">亚海悬城的三条主干道（A 大道 / 中路 / B 大道）都能用「寻敌箭」隔墙扫描，猎枭是这张图最稳的开局信息位——两发箭下去，对面怎么站基本就清楚了。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/sova_ability1.png" alt=""><b>雷击箭</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/sova_ability2.png" alt=""><b>寻敌箭</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/sova_grenade.png" alt=""><b>枭型无人机</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/sova_ultimate.png" alt=""><b>狂猎之怒</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">4 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_sova_03.png"
+                   alt="猎枭 在亚海悬城的A 点后方反弹扫描点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 寻敌箭</div>
+              <h3 class="spot__title">A 点后方反弹扫描</h3>
+              <p class="spot__sub">寻敌箭　·　约 31 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大道出来后的第一根柱子后面，只露半个肩膀——被 A 天台架枪打到是这个位置唯一的风险。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压到 A 点天台下方那道矮墙的上沿，往右上方向小角度发射，让箭先打进矮墙、再反弹扫过包点。偏一度都会插在墙上不弹，练习时盯着箭的第一个落点修正。</dd></div>
+                <div><dt>落点</dt><dd>扫描同时覆盖 A 点包点、天台下方与 A 大道进入口三个位置，一次箭看到三个人是常态。</dd></div>
+                <div><dt>时机</dt><dd>队伍提速前 3 秒打出去。就算箭当场被打掉，也说明「有人正在看 A 点」，本身就是情报。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>箭要打在墙的「上沿」而不是正面，正面上是插上去不反弹的——这是新手最常犯的错。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_sova_04.png"
+                   alt="猎枭 在亚海悬城的中路高抛封锁比萨口点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 雷击箭</div>
+              <h3 class="spot__title">中路高抛封锁比萨口</h3>
+              <p class="spot__sub">雷击箭　·　约 27 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在中路「树」后方偏左，贴住掩体，先用小拉身位看清比萨口有没有人，再决定蓄力高度。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬到中路天窗（顶部亮区）中心偏右一点，满蓄力直射，让箭从高空落下。高度差就是这张图的全部诀窍：平射会被墙挡，高抛才能越过天窗。</dd></div>
+                <div><dt>落点</dt><dd>落点在比萨口与中路走廊的交界，直接逼退架在那里的守方，还能和白烟形成「先烧后进」的节奏。</dd></div>
+                <div><dt>时机</dt><dd>队伍从中路推进、或者要切 B 点的第一时间。雷击箭 30 点伤害不算高，但能打断架枪节奏。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>满蓄力的箭飞得远但声音很大。宁可提前打、让对面听到声音自己退，也别贴脸再打。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_sova_05.png"
+                   alt="猎枭 在亚海悬城的B 大道起点扫描点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 寻敌箭</div>
+              <h3 class="spot__title">B 大道起点扫描</h3>
+              <p class="spot__sub">寻敌箭　·　约 29 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅出口的墙角，身体贴墙，先确认 B 大道方向没有直接枪线。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬到 B 点花园矮墙的上方，满蓄力抛射，让箭越过矮墙后落在包点与花园的交界。</dd></div>
+                <div><dt>落点</dt><dd>扫描同时覆盖 B 点包点、花园与 B 天台入口，是「开局确认 B 点几个人」最快的办法。</dd></div>
+                <div><dt>时机</dt><dd>开局第 1 秒就打，队友还在集结的时候。对面没布防完，命中的概率最高。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 点的矮墙比 A 点天台低，箭要抛得更高一点。抛低了会插在墙外，白费一支箭。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_sova_06.png"
+                   alt="猎枭 在亚海悬城的中路扫 B 点后手点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 04</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 04 · 寻敌箭</div>
+              <h3 class="spot__title">中路扫 B 点后手</h3>
+              <p class="spot__sub">寻敌箭　·　约 26 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在中路树后的掩体边，先用小身位确认 B 大道方向没人贴脸。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 B 点包点后墙的中段，让箭打在后墙上反弹扫过来，覆盖包点内侧。</dd></div>
+                <div><dt>落点</dt><dd>从中路方向扫 B 点，很多守方只顾着看 B 大道，这一箭经常能扫到 2 个人。</dd></div>
+                <div><dt>时机</dt><dd>队伍从中路转 B 的瞬间，和队友的烟同时出手。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>这箭的价值在于「角度」：从中路扫过去，守方的掩体朝向是挡不住的。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-ascent-brimstone" role="tabpanel"
+               aria-label="炼狱 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">炼狱</h2>
+            <div class="agent-head__en">BRIMSTONE · CONTROLLER</div>
+            <p class="agent-head__why">炼狱的烟是从天上直接落下来的，不穿墙也不被地形挡住。亚海悬城这种「多入口 + 高台」的地图，最适合用三颗烟把 A 点的所有高台一次性堵死——这是最不需要练度、性价比最高的控场。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/brimstone_grenade.png" alt=""><b>振奋信标</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/brimstone_ability1.png" alt=""><b>燃烧榴弹</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/brimstone_ability2.png" alt=""><b>空投烟幕</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/brimstone_ultimate.png" alt=""><b>天基光束</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_brimstone_07.png"
+                   alt="炼狱 在亚海悬城的三颗烟封 A 点全部高台点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 空投烟幕</div>
+              <h3 class="spot__title">三颗烟封 A 点全部高台</h3>
+              <p class="spot__sub">空投烟幕　·　半径约 20 m 覆盖　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅最里侧的箱子后方，完全不需要露身位——按战术地图就能选点，这也是炼狱最舒服的地方：他的站位永远在掩体后。</dd></div>
+                <div><dt>瞄点</dt><dd>在地图上把三颗烟依次放在：A 点包点中央、A 天台护栏正前方、A 大道出口。三颗要错开一格，不要全部叠在包点上——烟的目的是切断视野，不是把包点涂白。</dd></div>
+                <div><dt>落点</dt><dd>A 点在 8 秒内变成一片白，守方的天台架枪和 A 大道交叉火力同时失效。</dd></div>
+                <div><dt>时机</dt><dd>队伍集火 A 点的瞬间一起丢。如果对面有猎枭 / 零这类信息位，先手烟会被扫穿，做好被反打的准备。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>烟扔完之后 8 秒内必须有人进点。烟散了你还没进，等于白送了一轮技能。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_brimstone_08.png"
+                   alt="炼狱 在亚海悬城的清 A 点默认架枪位点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 燃烧榴弹</div>
+              <h3 class="spot__title">清 A 点默认架枪位</h3>
+              <p class="spot__sub">燃烧榴弹　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大道中段的墙角，先确认 A 天台没有架枪——燃烧榴弹有飞行时间，投掷时你是静止的。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 点右侧掩体（最常见的蹲点）的墙根，往墙上打一发让它反弹进掩体后面。直接扔进去会被掩体挡在外面，反弹才是关键。</dd></div>
+                <div><dt>落点</dt><dd>火焰在掩体后方铺开，把蹲点的人逼出来或者直接烧掉，同时封锁那条贴墙推进的路线。</dd></div>
+                <div><dt>时机</dt><dd>烟散开、队友刚进点的第一秒。燃烧弹是「补漏」，要打在队友视野的盲区。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>别往包点中央打——队友马上要走那里，火焰反而挡了自己人的进点路线。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_brimstone_09.png"
+                   alt="炼狱 在亚海悬城的B 点双烟封天台与入口点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 空投烟幕</div>
+              <h3 class="spot__title">B 点双烟封天台与入口</h3>
+              <p class="spot__sub">空投烟幕　·　半径约 18 m 覆盖　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅最里侧的箱子后，按战术地图选点，全程不露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>第一颗放在 B 天台正前方，第二颗放在 B 主入口上方。两颗烟形成一条斜线，把 B 点的「高 + 低」两个视野一起切掉。</dd></div>
+                <div><dt>落点</dt><dd>B 点变成盲区，队伍可以从 B 大厅贴墙推进到包点边缘。</dd></div>
+                <div><dt>时机</dt><dd>队伍集火 B 点、准备进门的那一刻。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 点比 A 点小，两颗烟就够了。第三颗留着打对面回防，别一次丢光。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-ascent-cypher" role="tabpanel"
+               aria-label="零 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">零</h2>
+            <div class="agent-head__en">CYPHER · SENTINEL</div>
+            <p class="agent-head__why">亚海悬城的守方最怕「不知道对面从哪来」。零的摄像头加绊线，可以把 A 大道、中路、B 大道三条线同时点亮——他一个人的信息量，抵得上队伍里另一个人的整轮技能。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/cypher_ability1.png" alt=""><b>赛博囚笼</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/cypher_ability2.png" alt=""><b>战术监控</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/cypher_grenade.png" alt=""><b>震慑绊线</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/cypher_ultimate.png" alt=""><b>神经取析</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_cypher_10.png"
+                   alt="零 在亚海悬城的A 点高墙摄像头点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 战术监控</div>
+              <h3 class="spot__title">A 点高墙摄像头</h3>
+              <p class="spot__sub">战术监控　·　视野覆盖约 35 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点天台下方的死角，蹲下，贴着墙把摄像头打在天花板与墙的交界处——位置高一点，对面进来第一眼不容易看到。</dd></div>
+                <div><dt>瞄点</dt><dd>摄像头朝向 A 大道出口，视角略微下压。放好后按互动切视角，确认「A 大道尽头入场口」和「A 天台入口」都在画面里，缺一个就挪位置。</dd></div>
+                <div><dt>落点</dt><dd>一处摄像头同时监控 A 大道出口与 A 天台入口，敌人进入 A 点前 3 秒就会被打上标记。</dd></div>
+                <div><dt>时机</dt><dd>每回合开局必放；换点防守时用「召回」带走，不要留在原地白送 200 块。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>摄像头被打掉不要紧，听到那一声枪响就知道那个方向有人——这一枪已经值回票价了。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_cypher_11.png"
+                   alt="零 在亚海悬城的A 大道 + 中路双绊线点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 震慑绊线</div>
+              <h3 class="spot__title">A 大道 + 中路双绊线</h3>
+              <p class="spot__sub">震慑绊线　·　线长约 6 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大道上墙的侧边，身体贴着墙放线，确保放线时不会被中路的人看到。</dd></div>
+                <div><dt>瞄点</dt><dd>第一根线从 A 大道左侧墙拉到右侧木箱，高度压到膝盖以下；第二根放在中路进入 A 点的窄道口。两根线错开高度，避免被一发子弹同时打掉。</dd></div>
+                <div><dt>落点</dt><dd>任何从 A 大道或中路裸进的人都会被晕，配合队友的交叉火力可以直接秒。</dd></div>
+                <div><dt>时机</dt><dd>开局布置；如果对面开始用手雷 / 技能清绊线，就把线换到更靠后的位置。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>绊线要「贴地」。抬到腰部以上，对手一个跳跃就过去了——这是最容易被忽略的细节。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_cypher_12.png"
+                   alt="零 在亚海悬城的B 主入口摄像头点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 战术监控</div>
+              <h3 class="spot__title">B 主入口摄像头</h3>
+              <p class="spot__sub">战术监控　·　视野覆盖约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点花园侧的墙边，蹲下，把摄像头打在能斜看 B 主通道的墙角。</dd></div>
+                <div><dt>瞄点</dt><dd>摄像头朝向 B 主出口，视角略微侧压，让画面同时带上「B 主出口」和「B 点包点」两个位置。</dd></div>
+                <div><dt>落点</dt><dd>B 主有人出来第一时间就能看到，配合绊线可以直接把人堵在出口。</dd></div>
+                <div><dt>时机</dt><dd>开局放；中路压力大时用召回带到中路，不要死守一个位置。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 点的摄像头最好「斜着放」，正对着出口很容易被第一时间打掉。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-ascent-omen" role="tabpanel"
+               aria-label="幽影 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">幽影</h2>
+            <div class="agent-head__en">OMEN · CONTROLLER</div>
+            <p class="agent-head__why">幽影的「黑瘴」可以远距离隔墙放烟，「践影」能瞬间从中路绕到 A 点背后。亚海悬城的中路拉扯，本质就是奥门的主场。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/omen_ability1.png" alt=""><b>暗魇</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/omen_ability2.png" alt=""><b>黑瘴</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/omen_grenade.png" alt=""><b>践影</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/omen_ultimate.png" alt=""><b>离魂</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_omen_13.png"
+                   alt="幽影 在亚海悬城的隔墙封 A 天台与 A 大道点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 黑瘴</div>
+              <h3 class="spot__title">隔墙封 A 天台与 A 大道</h3>
+              <p class="spot__sub">黑瘴　·　约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在中路树后的箱子边，用「暗影视界」进入放烟视角——身体在掩体后完全安全，这也是幽影比炼狱灵活的地方：他能看到烟的最终位置。</dd></div>
+                <div><dt>瞄点</dt><dd>在暗影视界里把第一颗烟点在 A 天台入口的门框上沿，第二颗放在 A 大道出口上方，两颗烟要连成一条「L 形烟墙」，不要留缝。</dd></div>
+                <div><dt>落点</dt><dd>守方从 A 天台和 A 大道两个方向的视野被同时切断，队伍可以从中路直接切 A 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍从中路转 A 的第 1 秒。黑瘴可以一直捏在手里，等队伍到位再放，不用急。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>烟不要放在包点上。烟放在「入口」才有意义，包点上留一点视野给队友补枪。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_omen_14.png"
+                   alt="幽影 在亚海悬城的中路绕背切 A 点点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 践影</div>
+              <h3 class="spot__title">中路绕背切 A 点</h3>
+              <p class="spot__sub">践影　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在比萨口内侧，先确认 A 点方向没有直接枪线，蹲下减少暴露面积——践影有 1 秒多的前摇，这 1 秒你会被看见。</dd></div>
+                <div><dt>瞄点</dt><dd>把传送落点定在 A 点包点的背面墙角，避开守方的常规架枪位。传送前先用「暗魇」逼一下视线，让对方不敢盯着路口看。</dd></div>
+                <div><dt>落点</dt><dd>直接出现在守方背后，与从 A 大道正面进的队友形成前后夹击。</dd></div>
+                <div><dt>时机</dt><dd>正面队伍已经开枪、守方注意力被拉走的那一刻。传送太早，落地就是被人等着的靶子。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>落地后先转身看清背后再开枪。很多人死在「落地还没转身」这一秒。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_omen_15.png"
+                   alt="幽影 在亚海悬城的B 点隔墙双烟点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 黑瘴</div>
+              <h3 class="spot__title">B 点隔墙双烟</h3>
+              <p class="spot__sub">黑瘴　·　约 26 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅的箱子后，用暗影视界进入放烟视角。</dd></div>
+                <div><dt>瞄点</dt><dd>第一颗烟压在 B 天台护栏前，第二颗放在 B 点包点与花园的交界，两颗要留一条「能看到包点」的缝给队友。</dd></div>
+                <div><dt>落点</dt><dd>守方的高台视野被切，B 点变成可以贴脸进的空间。</dd></div>
+                <div><dt>时机</dt><dd>队伍从 B 大厅提速的第 1 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>两颗烟之间留的缝很关键：宁愿留窄一点，也别让对面能从缝里架枪。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-ascent-phoenix" role="tabpanel"
+               aria-label="不死鸟 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">不死鸟</h2>
+            <div class="agent-head__en">PHOENIX · DUELIST</div>
+            <p class="agent-head__why">不死鸟的双闪加火墙，是亚海悬城 A 大道「直线对枪」的最优解。他不需要复杂点位，靠的是「用技能换一次免费的对枪机会」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/phoenix_grenade.png" alt=""><b>火冒三丈</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/phoenix_ability1.png" alt=""><b>火热手感</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/phoenix_ability2.png" alt=""><b>闪光曲球</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/phoenix_ultimate.png" alt=""><b>再火一回</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_phoenix_16.png"
+                   alt="不死鸟 在亚海悬城的A 大道弯道曲球闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 闪光曲球</div>
+              <h3 class="spot__title">A 大道弯道曲球闪</h3>
+              <p class="spot__sub">闪光曲球　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大道弯道前的墙后，贴墙站好，不要提前露头——这颗闪的价值就在于「对面不知道你到弯道了」。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对着弯道上方 45° 的墙面，向右甩出一个弧线，让闪光在 A 点包点上方爆开。关键是弧度：贴着墙角扔会直接砸墙，要留出飞行空间。</dd></div>
+                <div><dt>落点</dt><dd>弧线闪光绕过墙角，A 点包点和天台同时白屏，队友可以贴脸进场。</dd></div>
+                <div><dt>时机</dt><dd>队伍贴到弯道、准备同步进点的瞬间。闪光爆开前不要露头，闪到自己最亏。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>闪光曲球在空中会拐弯，爆点位置要练。也可以踩着「火冒三丈」进点，火墙能挡住视觉效果。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/ascent_phoenix_17.png"
+                   alt="不死鸟 在亚海悬城的中路切 A 的移动掩体点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 火冒三丈</div>
+              <h3 class="spot__title">中路切 A 的移动掩体</h3>
+              <p class="spot__sub">火冒三丈　·　墙长约 12 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在中路树前偏 A 点一侧，确保火墙能顺着通往 A 点的通道铺过去。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压在地面，向 A 点通道方向按住射击，火墙会沿地面一路推过去。火墙是「直线」的，方向歪一点就白放。</dd></div>
+                <div><dt>落点</dt><dd>一道移动火墙切开中路与 A 点通道，敌人视线被挡、踩上去还会掉血。</dd></div>
+                <div><dt>时机</dt><dd>队伍从「中路 → A 点」转移时；或者残局用它封住回防路线。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>队友要跟在墙后面走。自己先冲出去，火墙反而把你的进场路线暴露了。</div>
+            </div>
+          </article>
+      </section>
+        </div>
+      </div>
+
+      <div class="map-switch">
+        <span class="eyebrow">NEXT MAP</span>
+        <h2 class="section-title" style="font-size:clamp(20px,2.4vw,28px);margin-top:10px;">换个地图继续看</h2>
+        <div class="map-switch__list">
+          <a class="map-switch__item" href="bind.html"><span>源工重镇</span><em>BIND</em></a><a class="map-switch__item" href="haven.html"><span>隐世修所</span><em>HAVEN</em></a><a class="map-switch__item" href="lotus.html"><span>莲华古城</span><em>LOTUS</em></a><a class="map-switch__item" href="sunset.html"><span>日落之城</span><em>SUNSET</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">关于本站</div>
+        <p style="color:var(--muted);font-size:14px;max-width:38ch;margin:0;">
+          LINEUP LAB 是一个《无畏契约》常用道具点位整理站：5 张地图、30 名英雄、80 组点位，
+          每组都写清楚站位、瞄点、落点与时机。本站为《新生实践课》网页设计作业作品。
+        </p>
+      </div>
+      <div>
+        <div class="foot-title">地图导航</div>
+        <ul class="foot-list">
+        <li><a href="../web/ascent.html">亚海悬城 · ASCENT</a></li>
+        <li><a href="../web/bind.html">源工重镇 · BIND</a></li>
+        <li><a href="../web/haven.html">隐世修所 · HAVEN</a></li>
+        <li><a href="../web/lotus.html">莲华古城 · LOTUS</a></li>
+        <li><a href="../web/sunset.html">日落之城 · SUNSET</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-title">素材与声明</div>
+        <ul class="foot-list">
+          <li>游戏美术素材版权归 Riot Games 所有</li>
+          <li>英雄立绘 / 技能图标 / 地图图取自官方公开素材接口</li>
+          <li>点位示意图为本站原创绘制，非精确比例</li>
+          <li>本站与 Riot Games 无隶属关系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LINEUP LAB · 点位实验室　|　《新生实践课》网页设计作业</span>
+      <span>5 MAPS · 30 AGENTS · 80 LINEUPS</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="回到顶部">↑</button>
+<script src="../web/js/site.js"></script>
+</body>
+</html>

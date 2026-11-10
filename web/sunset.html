@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="无畏契约日落之城常用道具点位：6 名英雄、15 组点位，站位/瞄点/落点/时机全拆解。">
+<meta name="author" content="《新生实践课》网页设计作业">
+<meta name="keywords" content="无畏契约,VALORANT,道具点位,lineup,点位图,亚海悬城,源工重镇,隐世修所,莲华古城,日落之城">
+<title>日落之城 点位 · LINEUP LAB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1923'/%3E%3Cpath d='M8 24 L16 6 L24 24 L20 24 L16 14 L12 24 Z' fill='%23FF4655'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../web/css/site.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="../index.html">
+      <svg class="brand__mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M6 27 L17 4 L28 27 L22.6 27 L17 14 L11.4 27 Z" fill="#FF4655"/>
+        <path d="M13.4 22.6 L17 15 L20.6 22.6 Z" fill="#0F1923"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">LINEUP LAB</span>
+        <span class="brand__sub">点位实验室 · VALORANT</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../web/ascent.html">亚海悬城</a>
+        <a href="../web/bind.html">源工重镇</a>
+        <a href="../web/haven.html">隐世修所</a>
+        <a href="../web/lotus.html">莲华古城</a>
+        <a href="../web/sunset.html">日落之城</a>
+        <a href="../web/agents.html">角色速查</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="map-hero">
+    <img class="map-hero__img" src="../image/maps/sunset_splash.jpg" alt="日落之城 地图全景">
+    <div class="map-hero__scrim"></div>
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">首页</a><span>/</span><span>地图库</span><span>/</span><span>日落之城</span>
+      </nav>
+      <h1 class="map-hero__title">日落之城</h1>
+      <div class="map-hero__en">SUNSET · 双包点 · 宽开口</div>
+      <p class="map-hero__desc">日落之城是标准的双包点地图：A 坡顶、B 市场两个宽开口，中路一条长街把它们连起来。这张图的点位节奏很快——开口宽，意味着「一次封堵」的价值远高于「精准单点」。</p>
+      <div class="map-hero__stats">
+        <div><b>2</b>个包点</div>
+        <div><b>6</b>名英雄</div>
+        <div><b>15</b>组点位</div>
+        <div><b>100%</b>官方中文译名</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <div class="agent-bg"><div class="agent-bg__layer is-on"></div><div class="agent-bg__layer"></div></div>
+    <div class="agent-bg__veil"></div>
+    <div class="wrap wrap--wide">
+      <div class="lineup__hint">
+        <b>怎么用：</b>点选左侧立绘（手机端为上方横排）切换英雄 → 右侧显示该英雄在本图的点位。
+        键盘 <b>↑ ↓</b> 也可以切换；切换时整块背景与主题色会跟着变。
+      </div>
+      <div class="lineup__grid">
+        <div class="rail" role="tablist" aria-label="选择英雄">
+          <div class="rail__title">英雄 · 点击切换</div>
+        <button class="rail__item is-active" type="button" role="tab" id="gekko"
+                aria-selected="true" tabindex="0"
+                data-target="#panel-sunset-gekko" data-slug="gekko"
+                data-accent="#E8A33D" data-bg="../image/agents/gekko_bg.jpg" title="盖可 · 先锋">
+          <img class="rail__portrait" src="../image/agents/gekko_full.webp" alt="盖可 立绘" loading="lazy">
+          <span class="rail__label">盖可<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="kayo"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-sunset-kayo" data-slug="kayo"
+                data-accent="#E8A33D" data-bg="../image/agents/kayo_bg.jpg" title="K/O · 先锋">
+          <img class="rail__portrait" src="../image/agents/kayo_full.webp" alt="K/O 立绘" loading="lazy">
+          <span class="rail__label">K/O<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="miks"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-sunset-miks" data-slug="miks"
+                data-accent="#1FB6A6" data-bg="../image/agents/miks_bg.jpg" title="迷核 · 控场者">
+          <img class="rail__portrait" src="../image/agents/miks_full.webp" alt="迷核 立绘" loading="lazy">
+          <span class="rail__label">迷核<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="hush"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-sunset-hush" data-slug="hush"
+                data-accent="#FF4655" data-bg="../image/agents/hush_bg.jpg" title="遐思 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/hush_full.webp" alt="遐思 立绘" loading="lazy">
+          <span class="rail__label">遐思<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="veto"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-sunset-veto" data-slug="veto"
+                data-accent="#4C86D9" data-bg="../image/agents/veto_bg.jpg" title="禁灭 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/veto_full.webp" alt="禁灭 立绘" loading="lazy">
+          <span class="rail__label">禁灭<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="waylay"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-sunset-waylay" data-slug="waylay"
+                data-accent="#FF4655" data-bg="../image/agents/waylay_bg.jpg" title="幻棱 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/waylay_full.webp" alt="幻棱 立绘" loading="lazy">
+          <span class="rail__label">幻棱<em>DUELIST</em></span>
+        </button>
+        </div>
+        <div class="panels">
+      <section class="panel is-active" id="panel-sunset-gekko" role="tabpanel"
+               aria-label="盖可 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">盖可</h2>
+            <div class="agent-head__en">GEKKO · INITIATOR</div>
+            <p class="agent-head__why">日落之城的 A 坡顶和 B 市场都是宽开口，盖可的顽皮搭档可以飞进去致盲，炫晕光波能直接把人从柜台后拽出来——他的道具还能回收，性价比是这张图最高的。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/gekko_ability1.png" alt=""><b>顽皮搭档</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/gekko_ability2.png" alt=""><b>炫晕光波</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/gekko_grenade.png" alt=""><b>嗨爆全场</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/gekko_ultimate.png" alt=""><b>无敌超鲨</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_gekko_01.png"
+                   alt="盖可 在日落之城的A 坡顶致盲点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 顽皮搭档</div>
+              <h3 class="spot__title">A 坡顶致盲</h3>
+              <p class="spot__sub">顽皮搭档　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅出口的掩体后，放出搭档后立刻跟上。</dd></div>
+                <div><dt>瞄点</dt><dd>操控搭档飞向 A 点坡顶平台，让它在上方爆开致盲。</dd></div>
+                <div><dt>落点</dt><dd>坡顶的守方被致盲，队伍可以直接上坡。</dd></div>
+                <div><dt>时机</dt><dd>队伍集合完毕、准备进 A 点的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>顽皮搭档打完弹匣后可以回收再用，回收路径会显示。别把它丢在原地浪费。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_gekko_02.png"
+                   alt="盖可 在日落之城的B 市场拽人点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 炫晕光波</div>
+              <h3 class="spot__title">B 市场拽人</h3>
+              <p class="spot__sub">炫晕光波　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道中段的墙后，对准 B 市场的柜台方向。</dd></div>
+                <div><dt>瞄点</dt><dd>放出光波后它会在市场中弹跳，撞到敌人后把人拽出来并眩晕。</dd></div>
+                <div><dt>落点</dt><dd>躲在柜台后的守方被拽到开阔地，队友可以直接收人。</dd></div>
+                <div><dt>时机</dt><dd>B 市场被架死、队伍推不动的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>光波需要「弹跳」才有效。直接扔进去会被柜台挡住，等于白给。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_gekko_03.png"
+                   alt="盖可 在日落之城的B 市场集束手雷点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 嗨爆全场</div>
+              <h3 class="spot__title">B 市场集束手雷</h3>
+              <p class="spot__sub">嗨爆全场　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道中段的墙后，确认队友不在落点附近。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬高对准 B 市场的天花板边缘，满蓄力抛出，让手雷在包点上方炸开。</dd></div>
+                <div><dt>落点</dt><dd>包点被大范围爆炸覆盖，守方要么退、要么被炸掉半血。</dd></div>
+                <div><dt>时机</dt><dd>队友准备强攻 B 点的前 1 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>嗨爆全场爆炸范围很大，扔之前一定要喊一声，别把队友一起炸进去。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-sunset-kayo" role="tabpanel"
+               aria-label="K/O 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">K/O</h2>
+            <div class="agent-head__en">KAY/O · INITIATOR</div>
+            <p class="agent-head__why">日落之城的守方极度依赖技能卡点，K/O 的零点嗅探可以直接把范围内的技能压制住——这是这张图最直接的反制手段，等于把对面的道具全部锁进抽屉里。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/kayo_grenade.png" alt=""><b>碎片溢出</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/kayo_ability1.png" alt=""><b>闪存过载</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/kayo_ability2.png" alt=""><b>零点嗅探</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/kayo_ultimate.png" alt=""><b>无效命令</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_kayo_04.png"
+                   alt="K/O 在日落之城的A 大厅穿墙闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 闪存过载</div>
+              <h3 class="spot__title">A 大厅穿墙闪</h3>
+              <p class="spot__sub">闪存过载　·　约 16 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅门后的墙边。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准门框上沿打出一发，让它在 A 点坡顶处爆开。</dd></div>
+                <div><dt>落点</dt><dd>A 点方向白屏，队伍直接冲上坡。</dd></div>
+                <div><dt>时机</dt><dd>队伍贴到 A 大厅门口、准备进点的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>闪光可以弹墙。贴在门框上打，比直接扔更稳，也不会闪着队友。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_kayo_05.png"
+                   alt="K/O 在日落之城的B 点技能压制点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 零点嗅探</div>
+              <h3 class="spot__title">B 点技能压制</h3>
+              <p class="spot__sub">零点嗅探　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道后方的掩体后，不需要露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>把零点嗅探扔到 B 市场包点上方，让它覆盖整个包点区域。</dd></div>
+                <div><dt>落点</dt><dd>范围内的敌人技能被压制，守方的「卡点道具」全部失效。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备强攻 B 点的前 2 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>压制的是「技能」不是枪法。压制期间要让队友立刻冲，别浪费这段窗口。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_kayo_06.png"
+                   alt="K/O 在日落之城的A 坡顶碎片溢出点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 碎片溢出</div>
+              <h3 class="spot__title">A 坡顶碎片溢出</h3>
+              <p class="spot__sub">碎片溢出　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅出口的掩体后，把碎片溢出捏在手里。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 坡顶平台的墙面，抛出去让它粘在墙上，把守方从平台边缘逼退。</dd></div>
+                <div><dt>落点</dt><dd>坡顶平台的守方被爆炸伤害 + 位移，队伍可以趁机上坡。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备上坡的前 2 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>碎片溢出可以「粘」在墙上，比扔在地上更难躲。贴着平台墙面扔效果最好。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-sunset-miks" role="tabpanel"
+               aria-label="迷核 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">迷核</h2>
+            <div class="agent-head__en">MIKS · CONTROLLER</div>
+            <p class="agent-head__why">迷核的声波帷幕是「地图选点」的烟，日落之城的三条主线都很长，隔墙放烟能同时封两个点——他在这张图的最大价值是「站在绝对安全的位置控场」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/miks_grenade.png" alt=""><b>电音脉冲</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/miks_ability2.png" alt=""><b>声波帷幕</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/miks_ability1.png" alt=""><b>共振谐律</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/miks_ultimate.png" alt=""><b>音脉强袭</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_miks_07.png"
+                   alt="迷核 在日落之城的A 坡顶双烟点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 声波帷幕</div>
+              <h3 class="spot__title">A 坡顶双烟</h3>
+              <p class="spot__sub">声波帷幕　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>在 A 大厅的掩体后按战术地图选点，完全不用露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>把烟分别放在 A 坡顶平台入口和 A 大道出口，两块烟错开，形成交叉封堵。</dd></div>
+                <div><dt>落点</dt><dd>A 点的两个主要视野同时被切断。</dd></div>
+                <div><dt>时机</dt><dd>队伍集结到 A 大厅的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>声波帷幕只能通过地图选点放，站位绝对安全。但烟的数量有限，别乱丢。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_miks_08.png"
+                   alt="迷核 在日落之城的B 市场回血毯点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 电音脉冲</div>
+              <h3 class="spot__title">B 市场回血毯</h3>
+              <p class="spot__sub">电音脉冲　·　约 14 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 市场侧翼的掩体后，先把电音脉冲切到需要的模式。</dd></div>
+                <div><dt>瞄点</dt><dd>守点时切成「治疗输出」，扔在包点后方；强攻时切成「震荡输出」，扔在包点中央。</dd></div>
+                <div><dt>落点</dt><dd>治疗模式下等于一张「回血毯」，震荡模式下持续掉血并打断对面推进。</dd></div>
+                <div><dt>时机</dt><dd>守点：队友交火后立刻铺；强攻：队友进点前一秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>电音脉冲能治疗队友，这是它最容易被忽略的用法。守点时扔在包点后方，队友打完一波能原地回血。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_miks_09.png"
+                   alt="迷核 在日落之城的A 坡顶音脉强袭点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 音脉强袭</div>
+              <h3 class="spot__title">A 坡顶音脉强袭</h3>
+              <p class="spot__sub">音脉强袭　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅出口，面向 A 坡顶方向，等队友都跟到位。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压向坡顶平台，向正前方释放区域，把平台上的守方全部击退并致聋。</dd></div>
+                <div><dt>落点</dt><dd>坡顶被清空，队伍可以直接上坡拿下 A 点。</dd></div>
+                <div><dt>时机</dt><dd>一波流的最后一击；或者残局用来打断对面守点。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>音脉强袭是击退型技能，会把敌人推走而不是打掉。推完要立刻跟上补枪，别让人跑掉。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-sunset-hush" role="tabpanel"
+               aria-label="遐思 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">遐思</h2>
+            <div class="agent-head__en">HUSH · DUELIST</div>
+            <p class="agent-head__why">遐思的灵光一念可以操控投掷物飞行，日落之城的 A 坡顶和 B 市场都有一堵高墙，正好可以绕过去闪——她的玩法核心就是「绕过高墙的那一下」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/hush_ability1.png" alt=""><b>灵光一念</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/hush_ability2.png" alt=""><b>念落星移</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/hush_grenade.png" alt=""><b>身随念动</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/hush_ultimate.png" alt=""><b>万念皆空</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_hush_10.png"
+                   alt="遐思 在日落之城的A 坡顶绕墙闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 灵光一念</div>
+              <h3 class="spot__title">A 坡顶绕墙闪</h3>
+              <p class="spot__sub">灵光一念　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅出口的墙后，先把灵光一念准备好。</dd></div>
+                <div><dt>瞄点</dt><dd>抛出后再次激活，让它朝准星方向飞，绕过 A 坡顶的墙，在平台背面爆开。</dd></div>
+                <div><dt>落点</dt><dd>坡顶守方全部被致盲，队伍直接上坡。</dd></div>
+                <div><dt>时机</dt><dd>队伍贴到 A 点坡下的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>灵光一念可以中途转向。多练几次记住绕过墙顶的角度，这颗闪能绕过绝大多数掩体。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_hush_11.png"
+                   alt="遐思 在日落之城的B 市场拉人点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 念落星移</div>
+              <h3 class="spot__title">B 市场拉人</h3>
+              <p class="spot__sub">念落星移　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道中段的墙后。</dd></div>
+                <div><dt>瞄点</dt><dd>把念落星移抛到 B 市场柜台后方，激活后把范围内的敌人拉向中心。</dd></div>
+                <div><dt>落点</dt><dd>躲在柜台后的守方被拉出来，还可能撞到墙受到震荡。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备强攻 B 点、对面开始抱团防守时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>拉拽会把敌人拉到中心。队友提前架好落点，就能直接收人。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-sunset-veto" role="tabpanel"
+               aria-label="禁灭 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">禁灭</h2>
+            <div class="agent-head__en">VETO · SENTINEL</div>
+            <p class="agent-head__why">日落之城的守方很依赖哨卫道具卡点，禁灭的噬源体可以直接把对面的装置全部清掉——她在这张图的作用，就是让对面的「守点体系」失效一整个回合。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/veto_ability2.png" alt=""><b>噬源体</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/veto_grenade.png" alt=""><b>涡流折跃</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/veto_ultimate.png" alt=""><b>完全进化</b><span>ULT</span></span><span class="ability"><img src="../image/abilities/veto_ability1.png" alt=""><b>裂变残片</b><span>SKILL 1</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_veto_12.png"
+                   alt="禁灭 在日落之城的B 点清道具点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 噬源体</div>
+              <h3 class="spot__title">B 点清道具</h3>
+              <p class="spot__sub">噬源体　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道掩体后，把噬源体放在能看到 B 市场包点的位置。</dd></div>
+                <div><dt>瞄点</dt><dd>放好后等对面布置完道具（听到声音就差不多了），再激活摧毁范围内的敌方装置。</dd></div>
+                <div><dt>落点</dt><dd>对面的哨卫道具、烟、绊线全部被摧毁，B 点的「卡点」瞬间消失。</dd></div>
+                <div><dt>时机</dt><dd>对面刚放完道具、队伍准备进点的前 2 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>噬源体只能清范围内的装置。放的位置要能看到包点，不然激活了也清不到。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_veto_13.png"
+                   alt="禁灭 在日落之城的A 坡顶捆人点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 裂变残片</div>
+              <h3 class="spot__title">A 坡顶捆人</h3>
+              <p class="spot__sub">裂变残片　·　约 16 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点侧翼的墙后，把裂变残片扔到 A 坡顶入口。</dd></div>
+                <div><dt>瞄点</dt><dd>残片落地后隐形，敌人进入范围就会被捆缚。</dd></div>
+                <div><dt>落点</dt><dd>上坡的敌人被捆住并致聋，配合枪线可以直接收人。</dd></div>
+                <div><dt>时机</dt><dd>听到 A 坡顶有脚步的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>裂变残片是陷阱。扔在对面必经的地面，不要扔在开阔处浪费。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-sunset-waylay" role="tabpanel"
+               aria-label="幻棱 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">幻棱</h2>
+            <div class="agent-head__en">WAYLAY · DUELIST</div>
+            <p class="agent-head__why">日落之城的 A 大道很长，幻棱的光速飞跃可以瞬间贴脸，是这张图最强的「入场」决斗者——她的点位不是「扔道具」，而是「把道具和位移串成一次进场」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/waylay_ability2.png" alt=""><b>溯流回光</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/waylay_grenade.png" alt=""><b>光棱闪爆</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/waylay_ability1.png" alt=""><b>光速飞跃</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/waylay_ultimate.png" alt=""><b>时光修罗场</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_waylay_14.png"
+                   alt="幻棱 在日落之城的A 大道双冲贴脸点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 光速飞跃</div>
+              <h3 class="spot__title">A 大道双冲贴脸</h3>
+              <p class="spot__sub">光速飞跃　·　约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大道入口，面向包点方向，先确认没有长枪线架着你。</dd></div>
+                <div><dt>瞄点</dt><dd>按住技能向前冲刺两次，第一次冲刺可以稍微上抬抢高度。</dd></div>
+                <div><dt>落点</dt><dd>直接贴到 A 点包点前，配合队友的烟同步进场。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备进 A 点的瞬间。冲刺前一定要有烟或闪配合。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>冲刺途中不是无敌的，对面架枪照样能打你。先扔光棱闪爆再冲，别裸冲。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/sunset_waylay_15.png"
+                   alt="幻棱 在日落之城的B 市场标记回撤点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 溯流回光</div>
+              <h3 class="spot__title">B 市场标记回撤</h3>
+              <p class="spot__sub">溯流回光　·　约 26 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>先在 B 大道中段的安全位置留下标记。</dd></div>
+                <div><dt>瞄点</dt><dd>冲进 B 市场打一波，打完按技能直接传送回标记点。</dd></div>
+                <div><dt>落点</dt><dd>打完一波安全脱身，不会因为撤退被收掉。</dd></div>
+                <div><dt>时机</dt><dd>「先手换血」之后、血量不高的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>传送途中看不到敌人、也无法攻击。撤退时别在原地停太久，会被预瞄。</div>
+            </div>
+          </article>
+      </section>
+        </div>
+      </div>
+
+      <div class="map-switch">
+        <span class="eyebrow">NEXT MAP</span>
+        <h2 class="section-title" style="font-size:clamp(20px,2.4vw,28px);margin-top:10px;">换个地图继续看</h2>
+        <div class="map-switch__list">
+          <a class="map-switch__item" href="ascent.html"><span>亚海悬城</span><em>ASCENT</em></a><a class="map-switch__item" href="bind.html"><span>源工重镇</span><em>BIND</em></a><a class="map-switch__item" href="haven.html"><span>隐世修所</span><em>HAVEN</em></a><a class="map-switch__item" href="lotus.html"><span>莲华古城</span><em>LOTUS</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">关于本站</div>
+        <p style="color:var(--muted);font-size:14px;max-width:38ch;margin:0;">
+          LINEUP LAB 是一个《无畏契约》常用道具点位整理站：5 张地图、30 名英雄、80 组点位，
+          每组都写清楚站位、瞄点、落点与时机。本站为《新生实践课》网页设计作业作品。
+        </p>
+      </div>
+      <div>
+        <div class="foot-title">地图导航</div>
+        <ul class="foot-list">
+        <li><a href="../web/ascent.html">亚海悬城 · ASCENT</a></li>
+        <li><a href="../web/bind.html">源工重镇 · BIND</a></li>
+        <li><a href="../web/haven.html">隐世修所 · HAVEN</a></li>
+        <li><a href="../web/lotus.html">莲华古城 · LOTUS</a></li>
+        <li><a href="../web/sunset.html">日落之城 · SUNSET</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-title">素材与声明</div>
+        <ul class="foot-list">
+          <li>游戏美术素材版权归 Riot Games 所有</li>
+          <li>英雄立绘 / 技能图标 / 地图图取自官方公开素材接口</li>
+          <li>点位示意图为本站原创绘制，非精确比例</li>
+          <li>本站与 Riot Games 无隶属关系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LINEUP LAB · 点位实验室　|　《新生实践课》网页设计作业</span>
+      <span>5 MAPS · 30 AGENTS · 80 LINEUPS</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="回到顶部">↑</button>
+<script src="../web/js/site.js"></script>
+</body>
+</html>

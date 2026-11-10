@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="无畏契约源工重镇常用道具点位：6 名英雄、17 组点位，站位/瞄点/落点/时机全拆解。">
+<meta name="author" content="《新生实践课》网页设计作业">
+<meta name="keywords" content="无畏契约,VALORANT,道具点位,lineup,点位图,亚海悬城,源工重镇,隐世修所,莲华古城,日落之城">
+<title>源工重镇 点位 · LINEUP LAB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1923'/%3E%3Cpath d='M8 24 L16 6 L24 24 L20 24 L16 14 L12 24 Z' fill='%23FF4655'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../web/css/site.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="../index.html">
+      <svg class="brand__mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M6 27 L17 4 L28 27 L22.6 27 L17 14 L11.4 27 Z" fill="#FF4655"/>
+        <path d="M13.4 22.6 L17 15 L20.6 22.6 Z" fill="#0F1923"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">LINEUP LAB</span>
+        <span class="brand__sub">点位实验室 · VALORANT</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../web/ascent.html">亚海悬城</a>
+        <a href="../web/bind.html">源工重镇</a>
+        <a href="../web/haven.html">隐世修所</a>
+        <a href="../web/lotus.html">莲华古城</a>
+        <a href="../web/sunset.html">日落之城</a>
+        <a href="../web/agents.html">角色速查</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="map-hero">
+    <img class="map-hero__img" src="../image/maps/bind_splash.jpg" alt="源工重镇 地图全景">
+    <div class="map-hero__scrim"></div>
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">首页</a><span>/</span><span>地图库</span><span>/</span><span>源工重镇</span>
+      </nav>
+      <h1 class="map-hero__title">源工重镇</h1>
+      <div class="map-hero__en">BIND · 无中路 · 双传送门</div>
+      <p class="map-hero__desc">源工重镇没有中路，两个包点各被一条长走廊锁死，再加上两组传送门，这张图的核心是「用一条墙把整条走廊切开」。谁的封墙更直、更早，谁就先拿到进点的门票。</p>
+      <div class="map-hero__stats">
+        <div><b>2</b>个包点</div>
+        <div><b>6</b>名英雄</div>
+        <div><b>17</b>组点位</div>
+        <div><b>100%</b>官方中文译名</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <div class="agent-bg"><div class="agent-bg__layer is-on"></div><div class="agent-bg__layer"></div></div>
+    <div class="agent-bg__veil"></div>
+    <div class="wrap wrap--wide">
+      <div class="lineup__hint">
+        <b>怎么用：</b>点选左侧立绘（手机端为上方横排）切换英雄 → 右侧显示该英雄在本图的点位。
+        键盘 <b>↑ ↓</b> 也可以切换；切换时整块背景与主题色会跟着变。
+      </div>
+      <div class="lineup__grid">
+        <div class="rail" role="tablist" aria-label="选择英雄">
+          <div class="rail__title">英雄 · 点击切换</div>
+        <button class="rail__item is-active" type="button" role="tab" id="viper"
+                aria-selected="true" tabindex="0"
+                data-target="#panel-bind-viper" data-slug="viper"
+                data-accent="#1FB6A6" data-bg="../image/agents/viper_bg.jpg" title="蝰蛇 · 控场者">
+          <img class="rail__portrait" src="../image/agents/viper_full.webp" alt="蝰蛇 立绘" loading="lazy">
+          <span class="rail__label">蝰蛇<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="raze"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-bind-raze" data-slug="raze"
+                data-accent="#FF4655" data-bg="../image/agents/raze_bg.jpg" title="雷兹 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/raze_full.webp" alt="雷兹 立绘" loading="lazy">
+          <span class="rail__label">雷兹<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="killjoy"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-bind-killjoy" data-slug="killjoy"
+                data-accent="#4C86D9" data-bg="../image/agents/killjoy_bg.jpg" title="奇乐 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/killjoy_full.webp" alt="奇乐 立绘" loading="lazy">
+          <span class="rail__label">奇乐<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="skye"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-bind-skye" data-slug="skye"
+                data-accent="#E8A33D" data-bg="../image/agents/skye_bg.jpg" title="斯凯 · 先锋">
+          <img class="rail__portrait" src="../image/agents/skye_full.webp" alt="斯凯 立绘" loading="lazy">
+          <span class="rail__label">斯凯<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="yoru"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-bind-yoru" data-slug="yoru"
+                data-accent="#FF4655" data-bg="../image/agents/yoru_bg.jpg" title="夜露 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/yoru_full.webp" alt="夜露 立绘" loading="lazy">
+          <span class="rail__label">夜露<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="harbor"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-bind-harbor" data-slug="harbor"
+                data-accent="#1FB6A6" data-bg="../image/agents/harbor_bg.jpg" title="海神 · 控场者">
+          <img class="rail__portrait" src="../image/agents/harbor_full.webp" alt="海神 立绘" loading="lazy">
+          <span class="rail__label">海神<em>CONTROLLER</em></span>
+        </button>
+        </div>
+        <div class="panels">
+      <section class="panel is-active" id="panel-bind-viper" role="tabpanel"
+               aria-label="蝰蛇 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">蝰蛇</h2>
+            <div class="agent-head__en">VIPER · CONTROLLER</div>
+            <p class="agent-head__why">源工重镇没有中路，两个包点都被「一条长走廊」锁死。蝰蛇的毒幕可以一次切断整条 A 短道或 B 长道的视野，是这张图最强的控场——也是最吃练习量的一个角色。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/viper_ability1.png" alt=""><b>瘴云</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/viper_ability2.png" alt=""><b>毒幕</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/viper_grenade.png" alt=""><b>蛇吻</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/viper_ultimate.png" alt=""><b>蝰腹</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">4 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_viper_01.png"
+                   alt="蝰蛇 在源工重镇的A 短道一刀切点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 毒幕</div>
+              <h3 class="spot__title">A 短道一刀切</h3>
+              <p class="spot__sub">毒幕　·　墙长 25 m+　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅靠墙的位置，面向 A 短道走廊，确保身体在墙后不被 A 点架枪看到。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬到走廊尽头门框的上沿，按住射击让毒幕沿走廊笔直铺出去，墙要覆盖「A 短道 → A 点」整段。判断标准很简单：站在走廊里往里看，不该看到 A 点的光。</dd></div>
+                <div><dt>落点</dt><dd>一条 25 米长的毒幕把 A 短道完全切开，守方在 A 点里看不到进攻方，进攻方却能贴墙推进。</dd></div>
+                <div><dt>时机</dt><dd>队伍集合完毕、准备从 A 短道提速时。毒幕可以提前 2 秒放，覆盖时间足够全队通过。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>毒幕一旦放下就固定，方向歪了整条墙就废。先在训练场对着这条走廊练 10 次，练到闭着眼也能放直再来打排位。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_viper_02.png"
+                   alt="蝰蛇 在源工重镇的A 澡堂清角点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 蛇吻</div>
+              <h3 class="spot__title">A 澡堂清角</h3>
+              <p class="spot__sub">蛇吻　·　约 16 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站到 A 短道中段的掩体后，身体贴墙，确保投掷时不被 A 澡堂窗口看到。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 澡堂门框上方的横梁，满蓄力抛出，让蛇吻从门框上方掉进澡堂内部。低抛会砸在门框上弹回来。</dd></div>
+                <div><dt>落点</dt><dd>蛇吻在澡堂门口铺开一片腐蚀区，蹲在里面的守方要么出来挨枪，要么被腐蚀到 1 血。</dd></div>
+                <div><dt>时机</dt><dd>推进到 A 澡堂前 5 米、准备清这个「必经蹲点」时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>蛇吻落地有一圈绿色痕迹，队友别踩进去。和闪光一起用效果最好——先闪再烧。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_viper_03.png"
+                   alt="蝰蛇 在源工重镇的B 长道毒幕点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 毒幕</div>
+              <h3 class="spot__title">B 长道毒幕</h3>
+              <p class="spot__sub">毒幕　·　墙长 28 m+　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅靠墙位置，面向 B 长道，确保自己完全在墙后。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬到 B 长道尽头门框的上沿，按住射击让毒幕沿长道笔直铺出去，覆盖「长道 → B 点」整段。</dd></div>
+                <div><dt>落点</dt><dd>B 长道被一条墙切开，守方在 B 点里完全失去视野，队伍可以贴墙推进。</dd></div>
+                <div><dt>时机</dt><dd>队伍集合完毕、从 B 长道提速时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 长道比 A 短道更窄，墙歪一点就会贴到墙上断开。练的时候盯着「墙的顶端是否笔直」。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_viper_04.png"
+                   alt="蝰蛇 在源工重镇的瘴云封 B 长道出口点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 04</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 04 · 瘴云</div>
+              <h3 class="spot__title">瘴云封 B 长道出口</h3>
+              <p class="spot__sub">瘴云　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 长道中段的掩体后，把毒球捏在手里，不要提前露头。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对着 B 长道出口上方的横梁抛出，让毒球在出口正上方展开，再按辅助射击拉长覆盖范围。</dd></div>
+                <div><dt>落点</dt><dd>出口被毒云封住，配合毒幕形成「双墙」，守方完全没有反击角度。</dd></div>
+                <div><dt>时机</dt><dd>毒幕已经放下、队伍推进到长道中段时补这颗。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>瘴云是「一次性的球烟」，可以远程引爆。队伍过完了记得按掉，别让毒气反过来挡队友。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-bind-raze" role="tabpanel"
+               aria-label="雷兹 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">雷兹</h2>
+            <div class="agent-head__en">RAZE · DUELIST</div>
+            <p class="agent-head__why">源工重镇的 A 短道和 B 长道都是「一条直线」，雷兹的集束手雷沿直线扔出去几乎必中，还能把守方从掩体后炸出来。她在这张图的点位，本质是「用爆炸物代替闪光」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/raze_ability1.png" alt=""><b>惊喜翻腾</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/raze_ability2.png" alt=""><b>彩雷飞溅</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/raze_grenade.png" alt=""><b>花车巡游</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/raze_ultimate.png" alt=""><b>晚安焰火</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_raze_05.png"
+                   alt="雷兹 在源工重镇的A 短道尽头清包点点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 彩雷飞溅</div>
+              <h3 class="spot__title">A 短道尽头清包点</h3>
+              <p class="spot__sub">彩雷飞溅　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 短道入口的拐角后，先探一眼确认 A 点没人贴脸，再准备投掷。</dd></div>
+                <div><dt>瞄点</dt><dd>准星仰角抬到 45°，对准 A 短道尽头的天花板边缘，满蓄力抛出，让手雷在包点上方炸开。</dd></div>
+                <div><dt>落点</dt><dd>五颗子雷覆盖 A 点包点，蹲点的守方必须移动，而移动就会露头。</dd></div>
+                <div><dt>时机</dt><dd>队友准备进点的前 1 秒，手雷爆开的瞬间队友同步进场收割。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>手雷有弹跳特性，别贴着墙扔，不然会弹回来炸到自己人。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_raze_06.png"
+                   alt="雷兹 在源工重镇的B 长道火箭跳抢高点点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 惊喜翻腾</div>
+              <h3 class="spot__title">B 长道火箭跳抢高点</h3>
+              <p class="spot__sub">惊喜翻腾　·　垂直 5 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站到 B 长道中段的墙边，面朝平台方向，确认头顶没有遮挡。</dd></div>
+                <div><dt>瞄点</dt><dd>准星向下压 45°，对着脚下偏后的地面完成火箭跳，空中把准星甩向平台边缘。</dd></div>
+                <div><dt>落点</dt><dd>直接站上 B 长道上方的高点，俯视整条长道，守方的架枪位全部暴露。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备从 B 长道强推时先抢高点；或者残局用来绕后。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>火箭跳会掉血，起跳前确保血量健康。落点选平台内侧，别掉回长道。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_raze_07.png"
+                   alt="雷兹 在源工重镇的B 长道集束手雷点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 彩雷飞溅</div>
+              <h3 class="spot__title">B 长道集束手雷</h3>
+              <p class="spot__sub">彩雷飞溅　·　约 24 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 长道入口的拐角后，先确认长道里没有贴脸的敌人。</dd></div>
+                <div><dt>瞄点</dt><dd>准星抬高对准长道尽头的天花板，满蓄力抛出，让手雷在 B 点出口处炸开。</dd></div>
+                <div><dt>落点</dt><dd>五颗子雷覆盖 B 长道出口，守方的架枪位被迫放弃。</dd></div>
+                <div><dt>时机</dt><dd>队友准备从 B 长道进点的前 1 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 长道是直线，手雷几乎不会偏。但长道太窄，扔之前确认队友不在落点上。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-bind-killjoy" role="tabpanel"
+               aria-label="奇乐 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">奇乐</h2>
+            <div class="agent-head__en">KILLJOY · SENTINEL</div>
+            <p class="agent-head__why">源工重镇的两个包点入口都很窄，奇乐的炮台加纳米蜂群，可以把 A 短道 / B 长道入口变成一条「进不来」的走廊——这是最省枪法的守点方式。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/killjoy_grenade.png" alt=""><b>纳米蜂群</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/killjoy_ability1.png" alt=""><b>自动哨兵</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/killjoy_ability2.png" alt=""><b>哨戒炮台</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/killjoy_ultimate.png" alt=""><b>全面封锁</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_killjoy_08.png"
+                   alt="奇乐 在源工重镇的A 点守点炮台点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 哨戒炮台</div>
+              <h3 class="spot__title">A 点守点炮台</h3>
+              <p class="spot__sub">哨戒炮台　·　射程约 30 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点塔楼下方的箱子后，蹲下，把炮台放在能看到 A 短道出口的角落。</dd></div>
+                <div><dt>瞄点</dt><dd>炮台要偏向 A 短道出口方向并稍微抬高，覆盖「A 短道 → A 点」的整段推进路线。</dd></div>
+                <div><dt>落点</dt><dd>炮台持续压制 A 短道出口，敌人一出来就被打，还能替你报点。</dd></div>
+                <div><dt>时机</dt><dd>每回合开局放在 A 点；如果队伍换点，用召回带走。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>炮台不要放在包点正中央。放在侧面夹角里，对面要转身才能打掉它。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_killjoy_09.png"
+                   alt="奇乐 在源工重镇的B 长道入口封路点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 纳米蜂群</div>
+              <h3 class="spot__title">B 长道入口封路</h3>
+              <p class="spot__sub">纳米蜂群　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点窗口下方的墙后，把蜂群捏在手里，不要提前露头。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 B 长道出口的地面（略微抬高，避开门口的道具），扔出去让它在出口铺开。</dd></div>
+                <div><dt>落点</dt><dd>一片纳米蜂群覆盖 B 长道出口，敌人踩上去掉血加减速，强行进点就是送。</dd></div>
+                <div><dt>时机</dt><dd>听到 B 长道有脚步、或者对面开始提速时立刻丢。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>蜂群可以手动引爆。看到人踩进去再按，伤害比提前铺开更集中。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_killjoy_10.png"
+                   alt="奇乐 在源工重镇的B 点自动哨兵卡口点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 自动哨兵</div>
+              <h3 class="spot__title">B 点自动哨兵卡口</h3>
+              <p class="spot__sub">自动哨兵　·　触发范围约 12 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点窗口下方的墙后，把哨兵贴在长道出口侧面的地面上。</dd></div>
+                <div><dt>瞄点</dt><dd>哨兵朝向 B 长道出口，贴着实体的侧面，让对面要进来才能打到它。</dd></div>
+                <div><dt>落点</dt><dd>有人从 B 长道出来就会触发，减速并暴露位置，配合炮台形成双层防线。</dd></div>
+                <div><dt>时机</dt><dd>开局部署；守 B 点时和炮台错开位置，别两个道具放一起被一发清掉。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>自动哨兵的触发范围是球形。贴地放比架高更稳，因为对面进门第一脚就会踩到。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-bind-skye" role="tabpanel"
+               aria-label="斯凯 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">斯凯</h2>
+            <div class="agent-head__en">SKYE · INITIATOR</div>
+            <p class="agent-head__why">源工重镇的两个包点都要经过长走廊，斯凯的引路之隼可以隔墙闪、辟林之虎能探路，她是这张图最好的「开路先锋」——一个鸟换来全队 5 秒的推进窗口。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/skye_ability1.png" alt=""><b>辟林之虎</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/skye_ability2.png" alt=""><b>引路之隼</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/skye_grenade.png" alt=""><b>愈生之息</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/skye_ultimate.png" alt=""><b>追猎之灵</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_skye_11.png"
+                   alt="斯凯 在源工重镇的A 短道隔墙闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 引路之隼</div>
+              <h3 class="spot__title">A 短道隔墙闪</h3>
+              <p class="spot__sub">引路之隼　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 短道中段的墙后，完全不需要露身位，按住技能键把鸟放出去。</dd></div>
+                <div><dt>瞄点</dt><dd>放出鸟后操控它贴着天花板飞，绕过 A 短道尽头的门框，在 A 点包点上空引爆。</dd></div>
+                <div><dt>落点</dt><dd>A 点包点和塔楼方向同时白屏，队友可以贴脸进点。</dd></div>
+                <div><dt>时机</dt><dd>队伍已经在短道里排好、准备同步进点的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>鸟被打掉就白给了。飞行路线要贴着高处走，别走直线被人一枪点掉。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_skye_12.png"
+                   alt="斯凯 在源工重镇的B 长道探路并震晕点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 辟林之虎</div>
+              <h3 class="spot__title">B 长道探路并震晕</h3>
+              <p class="spot__sub">辟林之虎　·　约 25 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 长道入口拐角后，先放虎、再跟着走。</dd></div>
+                <div><dt>瞄点</dt><dd>放出虎后一直往前推，操控它撞向 B 长道出口的墙角，让震荡覆盖出口。</dd></div>
+                <div><dt>落点</dt><dd>出口附近的守方被震晕并暴露位置，队伍顺着长道直接进点。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 B 长道的第一时间。虎被打了也没关系，至少消耗了对面的子弹和位置。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>虎撞墙会停下，别对着墙推。出口右侧的箱子后面是最常见的蹲点，先撞那里。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_skye_13.png"
+                   alt="斯凯 在源工重镇的B 大厅隔墙闪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 引路之隼</div>
+              <h3 class="spot__title">B 大厅隔墙闪</h3>
+              <p class="spot__sub">引路之隼　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅的掩体后，按住技能键把鸟放出去。</dd></div>
+                <div><dt>瞄点</dt><dd>鸟贴着天花板飞，绕过 B 大厅的门框，在包点上空引爆。</dd></div>
+                <div><dt>落点</dt><dd>B 点守方被闪，队伍可以从长道直接进。</dd></div>
+                <div><dt>时机</dt><dd>队伍已经贴到 B 长道中段、准备进门时。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>B 大厅的门框比 A 点低，鸟要贴着门框上沿飞，不要贴着地面。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-bind-yoru" role="tabpanel"
+               aria-label="夜露 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">夜露</h2>
+            <div class="agent-head__en">YORU · DUELIST</div>
+            <p class="agent-head__why">源工重镇的传送门让「绕后」变成常规战术，夜露的传送门加假身，可以把这套机制玩到极致——他在这张图的点位不是「扔」，而是「放个门，然后从对面想不到的角度出现」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/yoru_grenade.png" alt=""><b>出其不意</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/yoru_ability1.png" alt=""><b>攻其不备</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/yoru_ability2.png" alt=""><b>不请自来</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/yoru_ultimate.png" alt=""><b>神鬼不觉</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_yoru_14.png"
+                   alt="夜露 在源工重镇的A 短道传送门绕后点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 不请自来</div>
+              <h3 class="spot__title">A 短道传送门绕后</h3>
+              <p class="spot__sub">不请自来　·　约 28 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅传送器旁的墙后，先把传送门放在 A 点背面墙角。</dd></div>
+                <div><dt>瞄点</dt><dd>传送门不需要瞄准，重点是落点：选 A 点包点背面，避开守方「A 塔楼」的常规视线。</dd></div>
+                <div><dt>落点</dt><dd>瞬间出现在 A 点背后，和正面队伍形成前后夹击。</dd></div>
+                <div><dt>时机</dt><dd>正面队伍已经开火、守方转头的那一秒。传送有 1 秒多前摇，太早会被守。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>传送前先放个假身骗一下。对面打假身的那 2 秒，就是你的传送窗口。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_yoru_15.png"
+                   alt="夜露 在源工重镇的B 长道假身骗枪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 出其不意</div>
+              <h3 class="spot__title">B 长道假身骗枪</h3>
+              <p class="spot__sub">出其不意　·　约 24 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 长道入口的拐角后，放出假身后立刻贴墙跟进。</dd></div>
+                <div><dt>瞄点</dt><dd>操控假身沿长道直冲出口，它会模仿你的移动动作，逼守方开枪。</dd></div>
+                <div><dt>落点</dt><dd>守方被迫开枪、暴露位置，你顺着假身的方向补枪。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备进 B 长道的瞬间。假身和真人要错开 1 秒进场。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>假身不会致盲，它只是纯粹的诱饵。价值来自「骗出子弹和位置」，别指望它帮你打人。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-bind-harbor" role="tabpanel"
+               aria-label="海神 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">海神</h2>
+            <div class="agent-head__en">HARBOR · CONTROLLER</div>
+            <p class="agent-head__why">源工重镇没有中路、包点入口单一，海神的狂潮水墙可以顺着走廊推过去，把整条 A 短道变成「移动掩体」——他的烟是唯一能跟着队伍一起走的。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/harbor_ability1.png" alt=""><b>狂潮</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/harbor_grenade.png" alt=""><b>乱涌</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/harbor_ability2.png" alt=""><b>海盾</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/harbor_ultimate.png" alt=""><b>怒涛</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_harbor_16.png"
+                   alt="海神 在源工重镇的A 短道推墙点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 狂潮</div>
+              <h3 class="spot__title">A 短道推墙</h3>
+              <p class="spot__sub">狂潮　·　墙长 25 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅走廊口，面向 A 短道，确保水墙能顺着走廊推出去。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压在地面向前按住射击，水墙会沿直线推过去，高度足够挡住站立视野。</dd></div>
+                <div><dt>落点</dt><dd>整条 A 短道被水墙覆盖，队伍可以贴着墙一路推到 A 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍集合后、从 A 短道提速的那一刻。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>水墙移动慢，别自己跑在前面。墙到了再跟，队友跟墙推进最安全。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/bind_harbor_17.png"
+                   alt="海神 在源工重镇的B 长道挡枪推进点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 海盾</div>
+              <h3 class="spot__title">B 长道挡枪推进</h3>
+              <p class="spot__sub">海盾　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 长道中段的掩体后，把海盾捏在手里等队友到位。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 B 长道出口方向向前抛出，让水球在出口前方展开成一面挡弹盾。</dd></div>
+                <div><dt>落点</dt><dd>水盾挡住 B 长道出口的正面枪线，队伍可以安全贴到出口。</dd></div>
+                <div><dt>时机</dt><dd>B 长道被架死、队伍推不动的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>水盾只能挡子弹、挡不住技能。对面有雷兹 / 奇乐时，先清道具再推。</div>
+            </div>
+          </article>
+      </section>
+        </div>
+      </div>
+
+      <div class="map-switch">
+        <span class="eyebrow">NEXT MAP</span>
+        <h2 class="section-title" style="font-size:clamp(20px,2.4vw,28px);margin-top:10px;">换个地图继续看</h2>
+        <div class="map-switch__list">
+          <a class="map-switch__item" href="ascent.html"><span>亚海悬城</span><em>ASCENT</em></a><a class="map-switch__item" href="haven.html"><span>隐世修所</span><em>HAVEN</em></a><a class="map-switch__item" href="lotus.html"><span>莲华古城</span><em>LOTUS</em></a><a class="map-switch__item" href="sunset.html"><span>日落之城</span><em>SUNSET</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">关于本站</div>
+        <p style="color:var(--muted);font-size:14px;max-width:38ch;margin:0;">
+          LINEUP LAB 是一个《无畏契约》常用道具点位整理站：5 张地图、30 名英雄、80 组点位，
+          每组都写清楚站位、瞄点、落点与时机。本站为《新生实践课》网页设计作业作品。
+        </p>
+      </div>
+      <div>
+        <div class="foot-title">地图导航</div>
+        <ul class="foot-list">
+        <li><a href="../web/ascent.html">亚海悬城 · ASCENT</a></li>
+        <li><a href="../web/bind.html">源工重镇 · BIND</a></li>
+        <li><a href="../web/haven.html">隐世修所 · HAVEN</a></li>
+        <li><a href="../web/lotus.html">莲华古城 · LOTUS</a></li>
+        <li><a href="../web/sunset.html">日落之城 · SUNSET</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-title">素材与声明</div>
+        <ul class="foot-list">
+          <li>游戏美术素材版权归 Riot Games 所有</li>
+          <li>英雄立绘 / 技能图标 / 地图图取自官方公开素材接口</li>
+          <li>点位示意图为本站原创绘制，非精确比例</li>
+          <li>本站与 Riot Games 无隶属关系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LINEUP LAB · 点位实验室　|　《新生实践课》网页设计作业</span>
+      <span>5 MAPS · 30 AGENTS · 80 LINEUPS</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="回到顶部">↑</button>
+<script src="../web/js/site.js"></script>
+</body>
+</html>

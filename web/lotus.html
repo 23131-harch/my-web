@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="无畏契约莲华古城常用道具点位：6 名英雄、16 组点位，站位/瞄点/落点/时机全拆解。">
+<meta name="author" content="《新生实践课》网页设计作业">
+<meta name="keywords" content="无畏契约,VALORANT,道具点位,lineup,点位图,亚海悬城,源工重镇,隐世修所,莲华古城,日落之城">
+<title>莲华古城 点位 · LINEUP LAB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1923'/%3E%3Cpath d='M8 24 L16 6 L24 24 L20 24 L16 14 L12 24 Z' fill='%23FF4655'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../web/css/site.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="../index.html">
+      <svg class="brand__mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M6 27 L17 4 L28 27 L22.6 27 L17 14 L11.4 27 Z" fill="#FF4655"/>
+        <path d="M13.4 22.6 L17 15 L20.6 22.6 Z" fill="#0F1923"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">LINEUP LAB</span>
+        <span class="brand__sub">点位实验室 · VALORANT</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="../web/ascent.html">亚海悬城</a>
+        <a href="../web/bind.html">源工重镇</a>
+        <a href="../web/haven.html">隐世修所</a>
+        <a href="../web/lotus.html">莲华古城</a>
+        <a href="../web/sunset.html">日落之城</a>
+        <a href="../web/agents.html">角色速查</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="map-hero">
+    <img class="map-hero__img" src="../image/maps/lotus_splash.jpg" alt="莲华古城 地图全景">
+    <div class="map-hero__scrim"></div>
+    <div class="wrap">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">首页</a><span>/</span><span>地图库</span><span>/</span><span>莲华古城</span>
+      </nav>
+      <h1 class="map-hero__title">莲华古城</h1>
+      <div class="map-hero__en">LOTUS · 三包点 · 机关门</div>
+      <p class="map-hero__desc">莲华古城有旋转门、可破坏墙、三包点这套独特机关，进攻路线随时会变。这张图的点位不能只算「封哪」，还要算「对面会从哪个机关绕过来」。</p>
+      <div class="map-hero__stats">
+        <div><b>3</b>个包点</div>
+        <div><b>6</b>名英雄</div>
+        <div><b>16</b>组点位</div>
+        <div><b>100%</b>官方中文译名</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lineup">
+    <div class="agent-bg"><div class="agent-bg__layer is-on"></div><div class="agent-bg__layer"></div></div>
+    <div class="agent-bg__veil"></div>
+    <div class="wrap wrap--wide">
+      <div class="lineup__hint">
+        <b>怎么用：</b>点选左侧立绘（手机端为上方横排）切换英雄 → 右侧显示该英雄在本图的点位。
+        键盘 <b>↑ ↓</b> 也可以切换；切换时整块背景与主题色会跟着变。
+      </div>
+      <div class="lineup__grid">
+        <div class="rail" role="tablist" aria-label="选择英雄">
+          <div class="rail__title">英雄 · 点击切换</div>
+        <button class="rail__item is-active" type="button" role="tab" id="clove"
+                aria-selected="true" tabindex="0"
+                data-target="#panel-lotus-clove" data-slug="clove"
+                data-accent="#1FB6A6" data-bg="../image/agents/clove_bg.jpg" title="暮蝶 · 控场者">
+          <img class="rail__portrait" src="../image/agents/clove_full.webp" alt="暮蝶 立绘" loading="lazy">
+          <span class="rail__label">暮蝶<em>CONTROLLER</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="tejo"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-lotus-tejo" data-slug="tejo"
+                data-accent="#E8A33D" data-bg="../image/agents/tejo_bg.jpg" title="钛狐 · 先锋">
+          <img class="rail__portrait" src="../image/agents/tejo_full.webp" alt="钛狐 立绘" loading="lazy">
+          <span class="rail__label">钛狐<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="vyse"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-lotus-vyse" data-slug="vyse"
+                data-accent="#4C86D9" data-bg="../image/agents/vyse_bg.jpg" title="维斯 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/vyse_full.webp" alt="维斯 立绘" loading="lazy">
+          <span class="rail__label">维斯<em>SENTINEL</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="iso"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-lotus-iso" data-slug="iso"
+                data-accent="#FF4655" data-bg="../image/agents/iso_bg.jpg" title="壹决 · 决斗者">
+          <img class="rail__portrait" src="../image/agents/iso_full.webp" alt="壹决 立绘" loading="lazy">
+          <span class="rail__label">壹决<em>DUELIST</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="fade"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-lotus-fade" data-slug="fade"
+                data-accent="#E8A33D" data-bg="../image/agents/fade_bg.jpg" title="黑梦 · 先锋">
+          <img class="rail__portrait" src="../image/agents/fade_full.webp" alt="黑梦 立绘" loading="lazy">
+          <span class="rail__label">黑梦<em>INITIATOR</em></span>
+        </button>
+        <button class="rail__item" type="button" role="tab" id="chamber"
+                aria-selected="false" tabindex="-1"
+                data-target="#panel-lotus-chamber" data-slug="chamber"
+                data-accent="#4C86D9" data-bg="../image/agents/chamber_bg.jpg" title="尚勃勒 · 哨卫">
+          <img class="rail__portrait" src="../image/agents/chamber_full.webp" alt="尚勃勒 立绘" loading="lazy">
+          <span class="rail__label">尚勃勒<em>SENTINEL</em></span>
+        </button>
+        </div>
+        <div class="panels">
+      <section class="panel is-active" id="panel-lotus-clove" role="tabpanel"
+               aria-label="暮蝶 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">暮蝶</h2>
+            <div class="agent-head__en">CLOVE · CONTROLLER</div>
+            <p class="agent-head__why">莲华古城三个包点、大量高低差，暮蝶的烟可以在她死后继续放——这在「多人分散抢三点」的阵容里价值极高，复活机制也和这张图的拉扯节奏很搭。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/clove_grenade.png" alt=""><b>虹吸</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/clove_ability2.png" alt=""><b>霞染</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/clove_ultimate.png" alt=""><b>化蝶</b><span>ULT</span></span><span class="ability"><img src="../image/abilities/clove_ability1.png" alt=""><b>整蛊</b><span>SKILL 1</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#1FB6A6">控场者</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_clove_01.png"
+                   alt="暮蝶 在莲华古城的A 点三烟封高位点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 霞染</div>
+              <h3 class="spot__title">A 点三烟封高位</h3>
+              <p class="spot__sub">霞染　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>在 A 大厅的掩体后按战术地图选点，完全不需要露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>地图上把烟放在 A 高地入口、A 树根通道、A 包点正面三个位置，形成一道「弧形烟墙」。</dd></div>
+                <div><dt>落点</dt><dd>A 点的三个高台视野同时被切断，队伍可以从 A 大道贴进去。</dd></div>
+                <div><dt>时机</dt><dd>队伍集结到 A 大道的瞬间。烟可以提前放，覆盖时间够。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>暮蝶阵亡后还能用霞染放短烟。死了别急着点复活，先给队友补一颗烟再走。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_clove_02.png"
+                   alt="暮蝶 在莲华古城的C 土丘清角点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 整蛊</div>
+              <h3 class="spot__title">C 土丘清角</h3>
+              <p class="spot__sub">整蛊　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 大道中段的墙后，身体不露。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 C 土丘后方的地面抛出去，让整蛊越过土丘落在掩体后。</dd></div>
+                <div><dt>落点</dt><dd>腐坏效果覆盖土丘后方，蹲在那里的人被迫移动。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 C 点前 2 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>整蛊不造成直接伤害，但会让人「无法回血」。和队友的枪线配合，能直接逼出位置。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_clove_03.png"
+                   alt="暮蝶 在莲华古城的B 上层霞染封路点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 霞染</div>
+              <h3 class="spot__title">B 上层霞染封路</h3>
+              <p class="spot__sub">霞染　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅的掩体后，按战术地图选点。</dd></div>
+                <div><dt>瞄点</dt><dd>一颗烟封 B 上层通道口，另一颗封 B 走廊出口，两颗错开一格形成交叉。</dd></div>
+                <div><dt>落点</dt><dd>B 点的两个高视野入口同时被封，队伍可以从 B 大道直接进。</dd></div>
+                <div><dt>时机</dt><dd>队伍集结到 B 大道的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>莲华古城的 B 点有「可破坏墙」，烟放在墙后面比放在墙前面更耐用。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-lotus-tejo" role="tabpanel"
+               aria-label="钛狐 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">钛狐</h2>
+            <div class="agent-head__en">TEJO · INITIATOR</div>
+            <p class="agent-head__why">钛狐的技能全部是「隔墙打击」，莲华古城三包点的建筑特别多，可以对着墙体直接打伤害——他在这张图等于自带一台「拆楼机」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/tejo_ability2.png" alt=""><b>精准投放</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/tejo_ability1.png" alt=""><b>特快专递</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/tejo_ultimate.png" alt=""><b>末日审判</b><span>ULT</span></span><span class="ability"><img src="../image/abilities/tejo_grenade.png" alt=""><b>潜袭爬虫</b><span>SKILL C</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_tejo_04.png"
+                   alt="钛狐 在莲华古城的A 高地隔墙打击点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 精准投放</div>
+              <h3 class="spot__title">A 高地隔墙打击</h3>
+              <p class="spot__sub">精准投放　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅后方，按战术地图选点，完全不需要露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>把导弹落点放在 A 高地平台的入口，让脉冲覆盖整个高台。</dd></div>
+                <div><dt>落点</dt><dd>高台守方被持续脉冲逼退，队伍可以趁机贴到 A 点。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备进 A 点前的 3 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>导弹的脉冲范围不大，落点要放在「对面必须站」的位置，不是包点中央。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_tejo_05.png"
+                   alt="钛狐 在莲华古城的B 上层弹跳震荡点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 特快专递</div>
+              <h3 class="spot__title">B 上层弹跳震荡</h3>
+              <p class="spot__sub">特快专递　·　约 25 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大道入口的墙后，对准 B 上层通道的墙面。</dd></div>
+                <div><dt>瞄点</dt><dd>用辅助射击让道具有一次弹跳，先撞墙再弹进上层通道。</dd></div>
+                <div><dt>落点</dt><dd>上层通道的守方被震荡并受到伤害，队伍可以沿 B 大道推进。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 B 大道的瞬间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>弹跳角度要练，直接扔会被墙挡住。练到「一弹进通道」就算毕业。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_tejo_06.png"
+                   alt="钛狐 在莲华古城的C 瀑布隔墙压制点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 精准投放</div>
+              <h3 class="spot__title">C 瀑布隔墙压制</h3>
+              <p class="spot__sub">精准投放　·　全图　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 大道后方，按战术地图选点，不露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>把落点放在 C 瀑布侧的平台入口，让脉冲覆盖守方的常规站位。</dd></div>
+                <div><dt>落点</dt><dd>C 瀑布方向的守方被迫移动，队伍可以贴到瀑布口。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备进 C 点的前 3 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>莲华古城的 C 点地形比 A、B 更碎，落点要选「一个人必须站」的位置，不要选开阔地。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-lotus-vyse" role="tabpanel"
+               aria-label="维斯 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">维斯</h2>
+            <div class="agent-head__en">VYSE · SENTINEL</div>
+            <p class="agent-head__why">莲华古城有「可破坏墙」和「旋转门」两个特殊机制，维斯的裁断可以跟着门一起封锁通道——她在这张图的强度，来自「把动态的地图变回静态」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/vyse_ability1.png" alt=""><b>裁断</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/vyse_ability2.png" alt=""><b>弧光玫瑰</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/vyse_grenade.png" alt=""><b>剃刀藤蔓</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/vyse_ultimate.png" alt=""><b>铁棘禁园</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_vyse_07.png"
+                   alt="维斯 在莲华古城的A 大道隐形墙点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 裁断</div>
+              <h3 class="spot__title">A 大道隐形墙</h3>
+              <p class="spot__sub">裁断　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点侧翼的墙后，把裁断放在 A 大道出口的地面上。</dd></div>
+                <div><dt>瞄点</dt><dd>放在敌人「必经」的位置。部署后裁断会隐形，敌人一经过就生成不可摧毁的墙。</dd></div>
+                <div><dt>落点</dt><dd>通道被彻底堵死，敌人只能从另一条路走，等于强制他们暴露。</dd></div>
+                <div><dt>时机</dt><dd>开局部署；对面提速时正好把路封死。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>裁断生成的墙不可摧毁，堵路效果比任何烟都硬。但冷却长，别乱放。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_vyse_08.png"
+                   alt="维斯 在莲华古城的C 瀑布致盲点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 弧光玫瑰</div>
+              <h3 class="spot__title">C 瀑布致盲</h3>
+              <p class="spot__sub">弧光玫瑰　·　约 16 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 点包点背面的墙边，用辅助射击把玫瑰放到墙的另一侧。</dd></div>
+                <div><dt>瞄点</dt><dd>玫瑰放在 C 瀑布通道内侧的墙上，等敌人走到正面再激活致盲。</dd></div>
+                <div><dt>落点</dt><dd>从 C 瀑布进来的敌人全部被致盲，队伍可以直接补枪。</dd></div>
+                <div><dt>时机</dt><dd>听到 C 瀑布有动静时再激活。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>玫瑰可以穿墙放。放在对面看不到的背面，激活时他们躲不掉。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_vyse_09.png"
+                   alt="维斯 在莲华古城的B 上层剃刀藤蔓点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 剃刀藤蔓</div>
+              <h3 class="spot__title">B 上层剃刀藤蔓</h3>
+              <p class="spot__sub">剃刀藤蔓　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 点走廊的墙后，把藤蔓抛向 B 上层通道的地面。</dd></div>
+                <div><dt>瞄点</dt><dd>藤蔓落地后隐形，被交互时生成一片伤害与减速区域。</dd></div>
+                <div><dt>落点</dt><dd>B 上层通道被封成「收费站」，敌人要么绕路、要么掉血硬吃。</dd></div>
+                <div><dt>时机</dt><dd>开局部署；对面从上层提速时正好踩中。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>藤蔓要扔在「对面必须交互」的位置，比如门口、楼梯口，别扔在开阔地中间。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-lotus-iso" role="tabpanel"
+               aria-label="壹决 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">壹决</h2>
+            <div class="agent-head__en">ISO · DUELIST</div>
+            <p class="agent-head__why">莲华古城的 A 树根和 C 土丘都是「贴脸交战」的位置，壹决的稳态剥离可以直接破掉对手的枪法自信——他的点位逻辑是「把对枪变成对面必输的对枪」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/iso_ability1.png" alt=""><b>稳态剥离</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/iso_ultimate.png" alt=""><b>决斗通牒</b><span>ULT</span></span><span class="ability"><img src="../image/abilities/iso_ability2.png" alt=""><b>战斗心流</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/iso_grenade.png" alt=""><b>绝对屏障</b><span>SKILL C</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#FF4655">决斗者</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_iso_10.png"
+                   alt="壹决 在莲华古城的A 树根破枪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 稳态剥离</div>
+              <h3 class="spot__title">A 树根破枪</h3>
+              <p class="spot__sub">稳态剥离　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 树根通道里，等对面贴到包点边缘。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对准 A 点包点方向打出一发，让它在路径上铺开。</dd></div>
+                <div><dt>落点</dt><dd>穿过区域的敌人被「易伤」，受到伤害翻倍，队友一枪就能带走。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备强攻 A 点、对面开始抱团的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>稳态剥离不造成伤害，是「加倍伤害」的开关。先打它、再打人，顺序别反。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_iso_11.png"
+                   alt="壹决 在莲华古城的C 长道挡枪推点点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 绝对屏障</div>
+              <h3 class="spot__title">C 长道挡枪推点</h3>
+              <p class="spot__sub">绝对屏障　·　约 10 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 大道中段的掩体后，面向 C 点方向。</dd></div>
+                <div><dt>瞄点</dt><dd>按住技能在自己面前立起屏障，屏障会跟着你移动。</dd></div>
+                <div><dt>落点</dt><dd>一面移动的屏障挡在正面，可以安全推到 C 点。</dd></div>
+                <div><dt>时机</dt><dd>C 点被架死、推不动的时候。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>屏障会消耗能量，别一路开着走。等对面开火再开，等于多一条命。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-lotus-fade" role="tabpanel"
+               aria-label="黑梦 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">黑梦</h2>
+            <div class="agent-head__en">FADE · INITIATOR</div>
+            <p class="agent-head__why">莲华古城建筑密集、掩体多，黑梦的幽爪可以隔墙标记，是清三包点最有效的信息位——一颗爪下去，整个包点谁在哪都清楚了。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/fade_ability1.png" alt=""><b>幽爪</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/fade_ability2.png" alt=""><b>诡眼</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/fade_grenade.png" alt=""><b>黯兽</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/fade_ultimate.png" alt=""><b>夜临</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#E8A33D">先锋</span>
+            <span class="chip">3 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_fade_12.png"
+                   alt="黑梦 在莲华古城的A 点隔墙标记点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 幽爪</div>
+              <h3 class="spot__title">A 点隔墙标记</h3>
+              <p class="spot__sub">幽爪　·　约 22 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 大厅的墙后，不需要露身位。</dd></div>
+                <div><dt>瞄点</dt><dd>准星对着 A 点方向的墙面抛出幽爪，它会穿墙落到 A 包点，落地后标记周围所有敌人。</dd></div>
+                <div><dt>落点</dt><dd>A 点附近的敌人全部被标记并留下轨迹，队伍可以看清每一个位置。</dd></div>
+                <div><dt>时机</dt><dd>队伍准备进 A 点前的 2 秒。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>幽爪会被打掉。扔的时候选高一点的角度，别贴地扔。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_fade_13.png"
+                   alt="黑梦 在莲华古城的C 瀑布追猎点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 黯兽</div>
+              <h3 class="spot__title">C 瀑布追猎</h3>
+              <p class="spot__sub">黯兽　·　约 26 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 大道入口的拐角后，先放兽再跟。</dd></div>
+                <div><dt>瞄点</dt><dd>放出黯兽后一路追向 C 瀑布方向，撞到敌人会致盲并标记。</dd></div>
+                <div><dt>落点</dt><dd>C 瀑布方向的守方被逼出位置或致盲，队伍顺势进点。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 C 大道的第一时间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>黯兽会自动追人，看到敌人会自动转向。别手动乱拐，交给它跑。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_fade_14.png"
+                   alt="黑梦 在莲华古城的B 上层诡眼控视野点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 03</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 03 · 诡眼</div>
+              <h3 class="spot__title">B 上层诡眼控视野</h3>
+              <p class="spot__sub">诡眼　·　约 20 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 B 大厅的墙后，先把诡眼准备好。</dd></div>
+                <div><dt>瞄点</dt><dd>把诡眼抛到 B 上层通道的入口，让它落地后展开侦查视野。</dd></div>
+                <div><dt>落点</dt><dd>上层通道的敌人被标记，队伍可以判断对面是在守 B 还是已经转点。</dd></div>
+                <div><dt>时机</dt><dd>队伍进 B 大厅的第一时间。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>诡眼要放在「高处」，低处很容易被一枪打掉，而且看不到上层平台。</div>
+            </div>
+          </article>
+      </section>
+      <section class="panel" id="panel-lotus-chamber" role="tabpanel"
+               aria-label="尚勃勒 的点位">
+        <div class="agent-head">
+          <div>
+            <h2 class="agent-head__name">尚勃勒</h2>
+            <div class="agent-head__en">CHAMBER · SENTINEL</div>
+            <p class="agent-head__why">莲华古城的 C 长道和 A 高地都有「一眼狙全场」的长枪线，尚勃勒的金牌猎头架枪几乎无解——他是这张图最典型的「用一把枪守住一条线」。</p>
+            <div class="abilities"><span class="ability"><img src="../image/abilities/chamber_ability2.png" alt=""><b>闪转自如</b><span>SKILL 2</span></span><span class="ability"><img src="../image/abilities/chamber_grenade.png" alt=""><b>贵宾限行</b><span>SKILL C</span></span><span class="ability"><img src="../image/abilities/chamber_ability1.png" alt=""><b>金牌猎头</b><span>SKILL 1</span></span><span class="ability"><img src="../image/abilities/chamber_ultimate.png" alt=""><b>孤高火力</b><span>ULT</span></span></div>
+          </div>
+          <div class="agent-head__side">
+            <span class="chip chip--role" style="--rcolor:#4C86D9">哨卫</span>
+            <span class="chip">2 组点位</span>
+          </div>
+        </div>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_chamber_15.png"
+                   alt="尚勃勒 在莲华古城的C 长道架枪点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 01</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 01 · 金牌猎头</div>
+              <h3 class="spot__title">C 长道架枪</h3>
+              <p class="spot__sub">金牌猎头　·　约 35 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 C 点高地的掩体后，只露半个身位。</dd></div>
+                <div><dt>瞄点</dt><dd>准星压在 C 大道「人头高度」，等对面从拐角出来的一瞬间开枪。</dd></div>
+                <div><dt>落点</dt><dd>C 长道整段被架死，对面必须用烟才能过。</dd></div>
+                <div><dt>时机</dt><dd>开局架枪；对面开始扔烟就换位。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>尚勃勒的枪是「技能枪」，没子弹了要按技能重新装填。别打到一半发现没子弹。</div>
+            </div>
+          </article>
+          <article class="spot reveal">
+            <figure class="spot__figure">
+              <img src="../image/spots/lotus_chamber_16.png"
+                   alt="尚勃勒 在莲华古城的A 树根减速陷阱点位示意图" loading="lazy">
+              <figcaption class="spot__figcap">
+                <span>示意图 · 非精确比例</span><span>SPOT 02</span>
+              </figcaption>
+            </figure>
+            <div class="spot__body">
+              <div class="spot__index">POINT 02 · 贵宾限行</div>
+              <h3 class="spot__title">A 树根减速陷阱</h3>
+              <p class="spot__sub">贵宾限行　·　约 18 m　·　难度
+                <span class="diff"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></p>
+              <dl class="spot__dl">
+                <div><dt>站位</dt><dd>站在 A 点包点背面，把陷阱放在 A 树根通道的地面上。</dd></div>
+                <div><dt>瞄点</dt><dd>陷阱隐形，敌人一进入范围就会被减速并暴露位置。</dd></div>
+                <div><dt>落点</dt><dd>A 树根的推进被拖住，配合尚勃勒的枪线可以直接收人。</dd></div>
+                <div><dt>时机</dt><dd>开局放在 A 点；对面转点就收回。</dd></div>
+              </dl>
+              <div class="spot__tip"><b>提示　</b>陷阱可以远程收回。换点防守的时候别忘了带走，别白送一个道具。</div>
+            </div>
+          </article>
+      </section>
+        </div>
+      </div>
+
+      <div class="map-switch">
+        <span class="eyebrow">NEXT MAP</span>
+        <h2 class="section-title" style="font-size:clamp(20px,2.4vw,28px);margin-top:10px;">换个地图继续看</h2>
+        <div class="map-switch__list">
+          <a class="map-switch__item" href="ascent.html"><span>亚海悬城</span><em>ASCENT</em></a><a class="map-switch__item" href="bind.html"><span>源工重镇</span><em>BIND</em></a><a class="map-switch__item" href="haven.html"><span>隐世修所</span><em>HAVEN</em></a><a class="map-switch__item" href="sunset.html"><span>日落之城</span><em>SUNSET</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">关于本站</div>
+        <p style="color:var(--muted);font-size:14px;max-width:38ch;margin:0;">
+          LINEUP LAB 是一个《无畏契约》常用道具点位整理站：5 张地图、30 名英雄、80 组点位，
+          每组都写清楚站位、瞄点、落点与时机。本站为《新生实践课》网页设计作业作品。
+        </p>
+      </div>
+      <div>
+        <div class="foot-title">地图导航</div>
+        <ul class="foot-list">
+        <li><a href="../web/ascent.html">亚海悬城 · ASCENT</a></li>
+        <li><a href="../web/bind.html">源工重镇 · BIND</a></li>
+        <li><a href="../web/haven.html">隐世修所 · HAVEN</a></li>
+        <li><a href="../web/lotus.html">莲华古城 · LOTUS</a></li>
+        <li><a href="../web/sunset.html">日落之城 · SUNSET</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-title">素材与声明</div>
+        <ul class="foot-list">
+          <li>游戏美术素材版权归 Riot Games 所有</li>
+          <li>英雄立绘 / 技能图标 / 地图图取自官方公开素材接口</li>
+          <li>点位示意图为本站原创绘制，非精确比例</li>
+          <li>本站与 Riot Games 无隶属关系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LINEUP LAB · 点位实验室　|　《新生实践课》网页设计作业</span>
+      <span>5 MAPS · 30 AGENTS · 80 LINEUPS</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="回到顶部">↑</button>
+<script src="../web/js/site.js"></script>
+</body>
+</html>
